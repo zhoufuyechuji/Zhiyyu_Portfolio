@@ -1,0 +1,205 @@
+[
+  {
+    "project": "GDD游戏设计文档_City of Illusion_English(2024)",
+    "pptx": "portfolio-source/GDD游戏设计文档_City of Illusion_English(2024)/作品集_GDD_City of Illusion_En.pptx",
+    "slug": "gdd-city-of-illusion-english-2024",
+    "slides": 65,
+    "images": [
+      "assets/projects/gdd-city-of-illusion-english-2024/image-01.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-02.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-03.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-04.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-05.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-06.jpg",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-07.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-08.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-09.png",
+      "assets/projects/gdd-city-of-illusion-english-2024/image-10.png"
+    ],
+    "text": [
+      {
+        "slide": 1,
+        "text": "Game Design Documentation | ---City of Illusions | ITGM-706 | Z | hiyun Yu"
+      },
+      {
+        "slide": 2,
+        "text": "T | his is | a Single player Narrative-driven puzzle-adventure game set in a visually striking world inspired by the ancient city of Pompeii. Players take on the role of an “awakened” individual living in a utopian city that hides a decaying reality beneath its opulent facade. As a catastrophic volcanic eruption approaches, players must uncover hidden truths, solve intricate puzzles, and activate a colossal mobile fortress to save the city from destruction. P | layers can engage in an immersive world, explore the Dual-World City, and solve a series of puzzles to find the truth and escape. | G | ame | Introduction | Tagline | Awaken from slumber. Find the fragile points of the Utopia, The key to saving it lies for you to uncover."
+      },
+      {
+        "slide": 3,
+        "text": "Story Premise | The utopian Pompeii is a lie. Long time ago, the city's rulers obtained a forbidden art from an evil sorcerer—extracting the life force of other humans or creatures to achieve immortality. Not only that, but to satisfy their desires, they built an arena to revel in the brutal clashes between people and beasts, and recklessly provoked wars. Due to the rulers' insatiable greed, the city quickly fell into decline. To continue secretly draining the life force of the common folk, the rulers used illusions to create the façade of a thriving and extravagant city. | When the gods discovered the truth, they were enraged by the rulers' excesses and decided to destroy the city with a volcanic eruption. Yet the gods were merciful and left the ordinary people a glimmer of hope—they revealed the rulers' deeds to you in a dream. | Awakening from this vision, as an awakened citizen, you must uncover the forgotten past of the city, unveil the truth behind the volcanic eruption, and decide Pompeii's fate—will you appease the gods, expose the corruption, or defy destiny at a catastrophic cost?"
+      },
+      {
+        "slide": 4,
+        "text": "This is a | Narrative Puzzle-Adventure | Game | which combines engaging storytelling with environmental exploration and intricate puzzles. The game emphasizes uncovering hidden truths, solving challenges integrated into the world, and progressing through a richly immersive narrative. | Game Genre | Game Goal | Short-Term Goal: Explore Key locations and Find some clues | Mid-Term Goal: Solve the puzzles and Get the pieces of the truth | Long-Term Goal: Find the full truth and get to save the city | City of Illusions offers a dual-world exploration system, solving immersive environmental puzzles that reveal the city’s hidden truths and a richly layered story inspired by the ancient city of Pompeii | USP"
+      },
+      {
+        "slide": 5,
+        "text": "Visual style | Retro, 2D, Isometric perspective | Two main tones: | The first tone is luxurious, dominated by warm colors to highlight the opulence of the city. The red hues in the visuals also hint at the impending eruption of the volcano. | The second tone is desolate, characterized by gray with touches of green, suggesting that while the city is in decline, the protagonist's awakening brings a glimmer of hope."
+      },
+      {
+        "slide": 6,
+        "text": "Core Gameplay | Dual-World Exploration | Finding hidden items( | fragile points | ) that do not fit the character of luxury in a luxurious city (this item rulers left out of that decaying reality when they made the illusion) and | Interact with those items to switch the world | Environmental Puzzle-Solving | F | ind and | Solve a variety of puzzles, including logic-based challenges, pattern recognition, and mechanical interactions. | Puzzles are seamlessly integrated into the environment, requiring keen observation and critical thinking. | Story-Driven Objectives | Progress through narrative arcs by uncovering the city’s secrets and unraveling the truth behind its illusionary facade. | The story evolves as players solve puzzles and unlock new areas. | ."
+      },
+      {
+        "slide": 7,
+        "text": "Mechanics | Dual-World Exploration | The illusionary utopia created by the rulers of Pompeii is not flawless. In their rush to maintain control, they overlooked certain objects from the decayed reality that remain partially present within the illusion. These objects act as | \"fragile points\" | —artifacts that, when touched, cause the illusion to temporarily shatter in the surrounding area, exposing the decayed reality beneath. | Hidden doors, collapsed bridges, or ancient inscriptions are visible only when the illusion is shattered, encouraging players to interact with the environment thoroughly. | Environmental Puzzle-Solving | Hidden Symbols: In the utopia, a mural appears pristine but meaningless. Switching to the decayed reality reveals faint, hidden symbols or clues layered beneath. | Repair and Activation: A mechanism appears intact in the illusion but broken in the decayed world. Players must alternate between realities to understand its original form and how to repair it. | Light Manipulation: Redirect light beams using reflective surfaces to activate ancient mechanisms. Some reflectors may only exist in the illusion or the reality. | Story-Driven Objectives | Shattering fragile points reveals forgotten items like personal belongings, writings, or murals that shed light on Pompeii’s true history and the rulers’ deceit. | Some fragile points might trigger environmental dangers, like collapsing structures | ."
+      },
+      {
+        "slide": 8,
+        "text": "Core Gam | e Feature | Dual-World | and Dynamic Map Changes | Mechanic | Seamlessly switch between two worlds reacts to players’ actions: the illusionary utopia and the decayed reality. | Integrated Puzzle Design | Puzzles are deeply embedded in the environment, requiring players to observe, interact, and think critically. | A variety of puzzle types, such as logic-based, sound-based, and mechanical challenges. | Non-Linear Progression | Players are free to explore key locations in any order, allowing for flexible gameplay and personalized experiences. | Puzzle & Environment-Driven Narrative | The story unfolds through solving puzzles, discovering environmental clues | (fragile points) | , and collecting fragments of truth hidden throughout the world. | Each puzzle reveals pieces of Pompeii’s history, the creation of the illusion, and the mysteries, gradually forming a cohesive narrative."
+      },
+      {
+        "slide": 9,
+        "text": "Game Loop | Search | fragile points(pieces of truth) | Solve puzzles | Get into the decaying Reality and know part of the truths | Puzzle appeal | Back to | the Utopia | Explore Utopia--> Identify Fragile Points--> Shatter Illusion --> Solve Puzzle --> Advance Narrative--> Discover New Area | Core | Common"
+      },
+      {
+        "slide": 10,
+        "text": "Linux, MacOS, Windows | Steam | Platform | Distribution | Audience | Explorers: | those players who like to explore the world. | Open-World | Narrative | For players who are more focused on the narrative and like to read stories | Puzzle | For players who like challenge to solve their puzzle and use their brains | Discovery the truth | Achievers and Collectors: those players who want to collect the pieces of truth and find the final truth"
+      },
+      {
+        "slide": 11,
+        "text": "Camera- | exploration | Camera Type: Third-Person Dynamic Tracking | Standard over-the-shoulder camera, positioned slightly above and behind the player. | Camera subtly tilts and follows terrain changes, ensuring smooth navigation. | Wide enough field of view (FOV) to ensure players can see important landmarks and Fragile Points. | Dynamic environmental framing ensures key objects or paths remain visible, reducing unnecessary UI clutter. | Details: | Walking / Running | The camera stays slightly above and behind the player for clear visibility of the path ahead. | A slight camera bobbing effect enhances immersion but is subtle enough to prevent motion sickness. | In narrow corridors or tight indoor spaces, the camera zooms in slightly to prevent collisions with walls or objects. | Entering Puzzle Areas | When approaching a Fragile Point, the camera slightly slows its tracking speed, drawing subtle attention to key objects. | If the player lingers near a puzzle-relevant object, the camera subtly shifts focus on it, hinting at its importance without forcing the player. | No forced cinematic angles to ensure player control is uninterrupted during exploration. | Climbing / Traversing Obstacles | During vaulting or climbing, the camera adjusts dynamically to avoid obstructions. | If climbing to a higher area, the camera tilts slightly upward to guide the player’s perspective naturally. | If dropping down from a ledge, the camera smoothly follows without jarring movements. | Interacting with Objects & Reading Clues | When the player inspects objects (scrolls, statues, relics, wall engravings, etc.), the camera transitions into a fixed over-the-shoulder close-up view. | Players can rotate objects manually, ensuring they can inspect items from different angles (if they contain hidden details). | Subtle camera blur on background elements helps focus attention on the inspected object."
+      },
+      {
+        "slide": 12,
+        "text": "Camera | Front loaded Level | :Pocket Watch (T | utorial | ) | Camera Type: Third-Person (Fixed Over-the-Shoulder) | Clear Object Interaction – The camera zooms in slightly when the player picks up the watch, ensuring close-up inspection of details like engravings. | Guided Player Focus – The over-the-shoulder view centers the cupboard where the watch is placed, eliminating distractions in the environment. | Cinematic Reality Shift – As the illusion cracks, the camera applies a brief focal blur or screen distortion effect, reinforcing the supernatural event. | Smooth Transition Back to Exploration – The camera zooms back out as the watch is placed down, seamlessly returning to third-person exploration mode. | Puzzle 1: The Gladiator Barracks (Symbol Activation Puzzle) | Camera Type: Third-Person Dynamic Tracking | Maintaining Environmental Awareness – The camera is positioned behind the player, ensuring a clear view of the barracks and its ruined structures while allowing freedom of movement. | Guiding the Player to Symbols – When the player activates the Fragile Point, symbols begin appearing on walls, shields, and pillars. The camera slightly tilts upward, emphasizing their placement in the environment. | Symbol Selection Clarity – As the player approaches a potential symbol, the camera subtly zooms in, ensuring no UI obstruction while allowing smooth navigation. | Progress Feedback via Camera Framing – When the correct symbols are activated, the camera subtly pulses inward, reinforcing the successful interaction. | Final Reveal of the Barracks’ Transformation – Upon puzzle completion, the camera widens, revealing the ruins flickering between illusion and reality, showing the contrast of a once-thriving gladiator training ground versus its current abandoned state."
+      },
+      {
+        "slide": 13,
+        "text": "Camera | Puzzle 2: The Oracle’s Tablet (Memory-Based Symbol Sequence) | Camera Type: Third-Person Fixed Tracking with Dynamic Focus | Framing the Temple’s Sacred Atmosphere – The camera starts in a slightly raised, over-the-shoulder perspective, showcasing the altar where the shattered Oracle’s Tablet lies. | Symbol Memorization Phase – Upon interacting with the tablet, the camera zooms in slightly, providing a focused view of the floating symbols. | Exploration Phase (Finding Symbols in the Environment) – As the player moves away from the tablet to find the matching symbols hidden in the ruins, the camera remains fixed in a standard third-person tracking mode, ensuring full environmental visibility. | Symbol Activation Clarity – Similar to Puzzle 2, the camera zooms in slightly when the player selects a symbol, providing clear visual confirmation. | Failure & Reset Feedback – If the player activates the wrong symbol, the camera briefly shakes subtly, reinforcing the need for memorization. | Final Sequence Completion Reveal – When the correct sequence is fully activated, the camera slowly moves back toward the Oracle’s Tablet, revealing the full prophecy being restored."
+      },
+      {
+        "slide": 14,
+        "text": "Camera | Puzzle 3: The Oracle’s Tablet (Memory-Based Symbol Sequence) | Camera Type: Third-Person Fixed Tracking with Dynamic Focus | Framing the Temple’s Sacred Atmosphere – The camera starts in a slightly raised, over-the-shoulder perspective, showcasing the altar where the shattered Oracle’s Tablet lies. | Symbol Memorization Phase – Upon interacting with the tablet, the camera zooms in slightly, providing a focused view of the floating symbols. | Exploration Phase (Finding Symbols in the Environment) – As the player moves away from the tablet to find the matching symbols hidden in the ruins, the camera remains fixed in a standard third-person tracking mode, ensuring full environmental visibility. | Symbol Activation Clarity – Similar to Puzzle 2, the camera zooms in slightly when the player selects a symbol, providing clear visual confirmation. | Failure & Reset Feedback – If the player activates the wrong symbol, the camera briefly shakes subtly, reinforcing the need for memorization. | Final Sequence Completion Reveal – When the correct sequence is fully activated, the camera slowly moves back toward the Oracle’s Tablet, revealing the full prophecy being restored."
+      },
+      {
+        "slide": 15,
+        "text": "Camera | Puzzle 4: The Mirror (Reflection Puzzle) | Camera Type: Fixed Dual-Perspective (Split-Screen with Mirror & Environment View) | For the Mirror Reflection Puzzle, a dual-interface camera system is implemented to ensure simultaneous visibility of both the mirror’s reflection and the real-world environment. | 1. Fixed Camera for Environment View (Left Side of Screen) | Maintains a wide, fixed perspective of the ruined noble villa, ensuring the player can see how the illusion changes in real-time. | Includes key environmental elements, such as pillars, furniture, and murals, reinforcing the shifting reality mechanic. | The player character remains visible in the left-side view, showing how they interact with the mirror. | 2. Interactive Mirror View (Right Side of Screen) | Displays the reflection as the player rotates the mirror, revealing distorted images of the past. | The reflection changes dynamically based on angle, position, and lighting. | Includes subtle visual distortion (light warping, cracks, or flickers) to emphasize the illusion breaking down."
+      },
+      {
+        "slide": 16,
+        "text": "Camera | Puzzle5 : The Laurel Wreath (Light & Shadow Manipulation) | Exploration Phase (Third-Person View) | The camera remains in a standard third-person perspective, allowing the player to explore the throne room. | The laurel wreath and candles are highlighted as interactable objects when approached. Once the player activates the control console, the camera transitions into the control interface view. | Control Phase (Crystal Ball Interface) | Once the player activates the control console, the camera transitions to a fixed view of a floating control panel, designed like an ancient mystical crystal ball interface. | Laurel Wreath Control (Left Crystal Ball): | The player drags or rotates the left crystal ball, which moves the laurel wreath within a restricted X-Y-Z axis range. | A preview on the prophecy wall updates in real-time, showing how the shadow changes. | If positioned correctly, the wreath locks into place automatically. | Candle Control (Right Crystal Ball): | The player drags or tilts the right crystal ball, adjusting the position and intensity of the candles. | Moving the ball left or right adjusts placement, while tilting adjusts brightness. | The shadows dynamically shift in real-time, reinforcing player feedback."
+      },
+      {
+        "slide": 17,
+        "text": "Camera | Puzzle 3: The Merchant’s Ledger (Interrogation & Deduction) | Camera Type: Camera Type: Third-Person (Fixed Over-the-Shoulder) | Dynamic Transition Between NPCs – The camera shifts between exploration mode (third-person perspective) and cinematic close-ups when speaking to Domitius or Lucilla/Gaius | Reaction Emphasis – The camera zooms in slightly on the NPC’s face and body language, reinforcing their lies, hesitation, or guilt. | Ledger Examination Clarity – When analyzing the false and real ledgers, the camera enters a focused close-up, allowing the player to scroll, zoom, and compare text easily. | Final Accusation Shot – When the true corruption is exposed, the camera pulls back to show both NPCs’ reactions, adding cinematic weight to the puzzle’s conclusion.."
+      },
+      {
+        "slide": 18,
+        "text": "Control | Action | Keyboard | Movement | WASD | Change perspectives | Move mouse to control perspective | Crouch | Ctrl | Jump | S | cape | Movement | Interaction | Action | Keyboard | Interact/Pick up object | E | Rotate Object | Mouse | press+drag | Zoom Object | Mouse scroll | Jump | S | cape"
+      }
+    ]
+  },
+  {
+    "project": "IndieGame_Erebus（2022.03-08)",
+    "pptx": "portfolio-source/IndieGame_Erebus（2022.03-08)/作品集_IndieGame_Erebus.pptx",
+    "slug": "indiegame-erebus-2022-03-08",
+    "slides": 3,
+    "images": [
+      "assets/projects/indiegame-erebus-2022-03-08/image-01.png",
+      "assets/projects/indiegame-erebus-2022-03-08/image-02.png",
+      "assets/projects/indiegame-erebus-2022-03-08/image-03.jpg",
+      "assets/projects/indiegame-erebus-2022-03-08/image-04.jpg",
+      "assets/projects/indiegame-erebus-2022-03-08/image-05.jpg",
+      "assets/projects/indiegame-erebus-2022-03-08/image-06.png",
+      "assets/projects/indiegame-erebus-2022-03-08/image-07.png"
+    ],
+    "text": [
+      {
+        "slide": 1,
+        "text": "Erebus | 简介： | 这是一款暗黑主题的 | 2D | 横版平台游戏，拥有原创剧情与世界观，灵感源自希腊神话与哥特式美学。游戏结合 | Souls-like | 的战斗张力与类银河恶魔城（ | Metroidvania | ）式的探索结构。玩家将操控一位失明的艺术家，他在堕入深渊后化身为死神，在崩坏的冥界中探索并追寻“艺术救赎”。 | 操作方式： 全键盘控制 | 类型： 角色扮演 | · | 横版动作平台跳跃 | 开发工具： | Unity | 、 | Photoshop | 、 | Corgi Engine | （ | Unity | 插件） | 下载地址： | https://yzy-jinn.itch.io/erebus | 制作过程： | 在确定游戏类型后，我选择使用 | Unity | 引擎，并尝试以 | Corgi Engine | 作为基础框架（参考： | https://assetstore.unity.com/packages/templates/systems/corgi-engine-2d-2-5d-platform-26617 | ） | 起初我认为它非常适合新手开发者，但在实际制作过程中发现其内部逻辑远比预期复杂。我花费大量时间研究其代码结构、事件流和状态管理，以理解它是如何实现移动、能力、交互等系统的。 | 制作过程中出现了诸多技术难题，例如： | 玩家死亡后部分道具无法重新刷新 | 离开毒池后角色的可跳跃次数被永久归零 | 引擎默认逻辑与我设计的体验不一致 | 为了解决这些问题，我深入分析引擎底层脚本，逐步排查逻辑链路，并通过覆写（ | override） | 或自定义脚本修复了系统行为 | 。 | 关卡设计： | 主要工作内容： | 游戏设计：核心玩法设计，系统设计（资源、循环、交互逻辑等）关卡节奏与关卡机制，剧情设计 | 玩家体验规划，对游戏节奏进行调控 | 游戏开发，机制验证、快速迭代 | , | 游戏测试并修正 | 美术制作（人物立绘，游戏内人物绘制，动画 | k | 帧， | UI | 制作） | 项目管理（开发时间规划，文档维护， 自我迭代与版本管理）"
+      },
+      {
+        "slide": 3,
+        "text": "视频介绍 | ： | Demo | ："
+      }
+    ]
+  },
+  {
+    "project": "OfficeDrift(2025.03-05)",
+    "pptx": "portfolio-source/OfficeDrift(2025.03-05)/作品集_OfficeDrift.pptx",
+    "slug": "officedrift-2025-03-05",
+    "slides": 2,
+    "images": [
+      "assets/projects/officedrift-2025-03-05/image-01.png",
+      "assets/projects/officedrift-2025-03-05/image-02.png",
+      "assets/projects/officedrift-2025-03-05/image-03.png",
+      "assets/projects/officedrift-2025-03-05/image-04.png",
+      "assets/projects/officedrift-2025-03-05/image-05.png"
+    ],
+    "text": [
+      {
+        "slide": 1,
+        "text": "Office Drift（2024） | 职责 | ： | 玩法设计 | · | 系统设计 | · | 美术与 | UI | 设计 | 工具 | ： | Unreal Engine 5 · Illustrator · P | hotoshop · | Maya · Substance Painter | 类型 | ： | 独立游戏 | · | Gaplus | 衍生式重制与现代化改编 | 下载地址 | ： | 链接： | https://pan.baidu.com/s/1p0Pax4Q_-USAnyJP4fIlzA | 提取码： | 2sw2 | 项目简介： | 玩家扮演一名被工作压垮的上班族。在加班后的通勤途中，他因疲惫而睡着，进入了一场超现实的梦境世界。 | 这片梦境就是游戏的主要关卡： | 玩家漂浮在由办公大楼构成的森林之间，面对象征“工作压力”与“职场压迫”的敌人与 | Boss | 。 | 以街机射击为基础，游戏通过现代视觉风格与主题化设计，将 | Gaplus | 的经典节奏重新呈现为一场关于压力、控制与情绪释放的象征性战斗。 | 开发过程： | 玩法与关卡设计：以 | Gaplus | 为基础重构玩法，参与核心机制与关卡节奏构思。重点研究“限制玩家行动”如何营造心理张力，形成与办公室主题相呼应的压力体验。 | 混合渲染探索：研究 | 2D | 风格化表现与 | 3D | 深度表现的混合渲染方法，使画面既具有平面化的视觉张力，又保留空间层次。 | UI | 设计（受 | 《 | 女神异闻录 | 5》 | 启发）：参考 | Persona 5 | 的 | UI | 特征，打造具有动态动效、强烈红黑白视觉层级的界面风格，使整体主题更具节奏感与叙事性。 | 项目特点： | 1. | 以梦境叙事框架呈现职场焦虑的象征化体验 | 以超现实空间表达日常生活中压抑、焦虑与麻木的情绪。 | 2. | 高对比、强节奏的 | UI | 营造冲击感 | Persona 5 | 风格 | UI | 营造“职场混乱 | × | 心理紧张”的视觉冲击。 | 主要工作内容： | 负责解析经典街机射击《 | Gaplus | 》重新将主题化为“办公室混乱”的美术与世界观方向，构建整体叙事调性、视觉比喻与角色（办公物件）设定 | 定义游戏核心循环（ | Core Loop | ）与玩家目标，拆解原版 | Gaplus | 的三段式行为结构（入场 → 结阵 → 俯冲），重新设计符合办公室主题的敌人行为、 | Attack Pattern | 与节奏 | 编写简化设计文档、行为流程图 | 负责制作美术的：背景、角色、 | UI | 、色彩、光照、特效制作，规范视觉语言，保证游戏主题一致性 | 设计敌人造型（文件夹、咖啡杯、椅子、办公用品）并使用 | 3 | 渲 | 2 | 的方法赋予个性化 | 核心玩法结构： | 1. | 敌机入场（ | Entrance Phase | ） | 玩家进入梦境世界后，敌人以预设 | Spline | 路径从画面外飞入， | 形成初始压迫感并为节奏铺垫。 | 2. | 阵型集结（ | Formation Phase | ） | 敌人自动移动到阵型槽位（ | Formation Slots | ）， | 组成“办公楼森林”式群体队形。 | 阵型稳定后会给玩家短暂喘息，让玩家观察下一波攻击意图。 | 3. | 俯冲攻击（ | Dive Attack Phase | ） | 敌人从阵型中脱离，执行不同类型的俯冲攻击：直线高速冲刺（文件攻击） | S | 形 | / | 螺旋式 | Dive | （咖啡杯）追踪型 | Dive | （象征领导压力的 | Boss | ） | 4. | 玩家反击（ | Combat Response | ） | 玩家通过射击、移动、规避等方式清理敌人， | 在有限空间中寻找安全点，对敌人形成节奏性压制。 | 5. | 阵型重组（ | Reformation / Recovery | ） | 部分存活敌人重新回到阵位，使节奏再次回到“稳定 → 紧张 → 稳定”的循环。 | 6. Wave | 完成与进入下一阶段（ | Wave Progression | ） | 击败所有敌人后进入下一阶段， | 难度通过敌人数量、 | Dive | 密度、移动轨迹复杂度逐步提升。"
+      }
+    ]
+  },
+  {
+    "project": "UE5蓝图功能练习(2024)",
+    "pptx": "portfolio-source/UE5蓝图功能练习(2024)/作品集_ue5蓝图功能练习.pptx",
+    "slug": "ue5-2024",
+    "slides": 3,
+    "images": [
+      "assets/projects/ue5-2024/image-01.png"
+    ],
+    "text": [
+      {
+        "slide": 1,
+        "text": "项目类型（ | Project Type）： | 技术练习 | / 2 | D | 平台跳跃游戏 | 引擎（ | Engine）： | Unreal Engine 5（Blueprint | ） | 主题（ | Theme）： | 甜点世界平台跳跃 | —— | 躲避危险、收集金币、开启出口 | Dessert Dash： | 模块化平台跳跃 框架 | 练习 | 项目简介： | 这是在 | Unreal Engine 5 | 中搭建的一个小型、模块化的平台跳跃游戏练习（以甜点主题进行呈现）。目的主要是为了练习蓝图的编写和开发一些小的功能以便以后使用。 | 十分简洁的核心玩法循环： | 在充满陷阱的场景中前进 → 收集金币与生命道具 → 达到目标数后开启关卡出口。 | 项目重点在于 | 系统化、可复用的 | Blueprint | 设计 | 。 | 每一个可交互物体（陷阱、平台、拾取物）都被实现为独立、可复用的 | Blueprint Actor | ，并遵循一致的触发流程与反馈规则，使整个框架能够轻松扩展或替换内容。 | 模块化 | Blueprint Actor | 架构每个陷阱、平台、拾取物都可单独拖入场景并重复使用一致化触发流程（ | Trigger Workflow | ）使用 | Overlap | 碰撞体 | + | 可配置的激活行为实现统一触发逻辑清晰的关卡进程逻辑（ | Progression Logic | ）金币目标 → 出口门出现 | / | 激活 → 满足条件即可完成关卡易于调节的设计变量（ | Designer-friendly Variables | ）可视化调整：范围、速度、冷却时间、金币值、伤害、路径节点等，使系统非常适合快速迭代或扩展内容"
+      },
+      {
+        "slide": 2,
+        "text": "可收集物（ | Collectibles | ）： | 金币拾取（ | Coin Pickups | ） → 带有全局计数系统 | 生命拾取（ | Health Pickups | ） → 用于回血，提高生存性 | 阈值逻辑（ | Threshold Logic | ） → 达到目标金币数后，会触发出口门的出现 | 平台与环境机制（ | Platform & Environment Mechanics | ）： | 可破坏 | / | 可“顶击”的平台：灵感来自马里奥的金币砖块，从下方顶击可生成奖励 | 沿固定路线移动的平台基于 | Spline | 或 | Waypoint | 实现路径移动 | 传送门（ | Teleporters | ）用于短距离传送、路线规划或小型关卡谜题 | 陷阱与危险物（ | Hazards & Traps | ）： | 距离触发式大炮（ | Proximity-triggered Cannon | ）玩家进入检测范围后自动发射 | 可触发尖刺（ | Triggered Spikes | ）根据玩家重叠或交互动作弹出 | / | 收回 | 巡逻尖刺（ | Patrolling Spikes | ）来回移动，制造时机挑战与节奏压力 | 已实现系统与可交互物体（ | Implemented Systems & | Interactables | ）"
+      },
+      {
+        "slide": 3,
+        "text": "Demo | 展示"
+      }
+    ]
+  },
+  {
+    "project": "儿童眼保健教育游戏(2021.01-08)",
+    "pptx": "portfolio-source/儿童眼保健教育游戏(2021.01-08)/作品集_儿童眼保健游戏项目.pptx",
+    "slug": "2021-01-08",
+    "slides": 6,
+    "images": [
+      "assets/projects/2021-01-08/image-01.png",
+      "assets/projects/2021-01-08/image-02.png",
+      "assets/projects/2021-01-08/image-03.png",
+      "assets/projects/2021-01-08/image-04.png",
+      "assets/projects/2021-01-08/image-05.png",
+      "assets/projects/2021-01-08/image-06.png",
+      "assets/projects/2021-01-08/image-07.jpeg",
+      "assets/projects/2021-01-08/image-08.jpeg",
+      "assets/projects/2021-01-08/image-09.png",
+      "assets/projects/2021-01-08/image-10.png"
+    ],
+    "text": [
+      {
+        "slide": 1,
+        "text": "Interactive Game for Children's Eye Care Knowledge(2021) | 操作方式： | 触屏 | 游戏类型： | 严肃游戏（ | Serious Game） | 游玩人数： | 1–4 | 人 | 使用工具： | Unity、Photoshop | 项目概述： | 这是一款面向儿童的互动式严肃游戏，旨在通过游戏化的方式帮助孩子学习正确的护眼知识。项目由我与 东叶光合工作室（ | DONG YE Studio | ） 及 上海电影传媒有限公司 合作开发，属于一项正式的商业项目。作为本项目的主游戏设计师，我负责：编写游戏说明书（ | Game Bible | ），包括核心玩法、教育目标、内容架构设计整体、交互系统、 | UI | 行为与儿童友好的操作方式使用 | Unity | 实现互动逻辑，确保教学目标与游戏体验紧密结合我的工作重点在于将儿童教育内容与趣味性玩法有机融合，使游戏既能有效传达护眼知识，又能保持良好的可玩性与吸引力。 | Demo | 链接 | : | Interactive Game for Children's Eye Care Knowledge | 下载地址 | : | 链接 | : | https://pan.baidu.com/s/1DxtIQKCmO5aBK9M-KY85Gg | 提取码 | : | bxng"
+      },
+      {
+        "slide": 2,
+        "text": "UI Framework:"
+      },
+      {
+        "slide": 3,
+        "text": "W | ork Process | ： | I was responsible for designing and implementing the core gameplay loop, defining control schemes, interaction rules, and feedback systems. | I designed the UI architecture, information hierarchy, and interaction flow, including wireframes and layout sketches, and collaborated with programmers to implement UI animation and behaviors. | I authored gameplay design documents, flowcharts, prototype videos, and technical specifications. | Throughout production, I communicated closely with programmers and artists to refine features through iterative development. | I also managed the planning and integration of all art and audio assets, coordinating pipelines to ensure smooth production. | Additionally, I conducted playtesting and data analysis to validate design decisions and continuously improve the overall player experience | ."
+      },
+      {
+        "slide": 4,
+        "text": "Game one | Game goal: For children who need to improve in distinguishing up, down, left, and right, the game aims to help children learn to identify the opening direction of the test object on the eye chart by sliding the direction icons. Besides, let them take an eyesight test. | Gameplay: Children slide the visual sign up, down, left, and right according to the opening direction of the sign. Getting the correct answers will earn a score, and the final score decides which medal users will gain. | Game two | Game Goal: Children can accurately identify the opening direction of the test object on the eye chart and accept eyesight examination. | Gameplay: Children choose the correct direction button in the lower button area according to the opening direction of the highlighted visual sign in the picture. It accumulates the correct answer scores, and players will get the corresponding medal according to the final result. | Game three | Game goal: Let children know the essential components of the eye. | Gameplay: Children choose their favorite eye component from the patterns at the bottom of the screen and drag it to the top to form an entire eye. | Game four | Game goal: Help children learn the correct way to use eye drops and allow their parents to help them instill eye drops | How to play: The system randomly displays the left and right eyes, and the children can complete the operation by following the correct steps (1. Open the eyelids, 2. Instill eye drops at the correct position, 3. Press and hold the corner of the eye for 5 seconds)"
+      },
+      {
+        "slide": 5,
+        "text": "Game five | Game goal: Help children know the important parts of eyeball structure and pay attention to eye protection | Gameplay: Select the correct pattern from the given eye components pictures and drag it into the correct corresponding position. (drag icon) | Game six | Game goal: Let children know that their eyes may be short-sighted (or farsighted, or astigmatic) when something happens, and they need to respond to their parents or teachers immediately. | Gameplay: Judge based on the random illustrations which displayed on the screen and choose whether the symptoms shown are nearsightedness, farsightedness, or astigmatism in limited time. | Game seven | Game goal: Let children have a better understanding of the role of glasses, be not afraid of wearing glasses if they are shortsighted, and accept their classmates who wear glasses... | Gameplay: According to the symptoms shown in the pictures in the icon area above, click on the correct glasses icon in the answer selection area below. | Game eight | Game goal: Let kids learn how to wear and maintain glasses appropriately. | Gameplay: Randomly play an animation of the behavior of wearing or maintaining glasses in the question bank, and the children judge whether the behavior is correct."
+      },
+      {
+        "slide": 6,
+        "text": "Game nine | Game goal: Let children learn how to prevent accidental injuries of the eyes and understand the basic common sense of dealing with unintentional injuries rightly. | Gameplay: Randomly select pictures in the question bank and play the corresponding voice. Children judge whether this behavior is proper. | Game ten | Game goal: Children learn the good habit of using their eyes, protecting their eyes, and preventing myopia. | Gameplay: When different eye-use pictures randomly drop down at the bottom, children click on the eye-use image that they think is correct. And points will be added for the correctness and deducted for mistakes. | Demo:"
+      }
+    ]
+  }
+]
