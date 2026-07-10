@@ -1,15 +1,47 @@
+import {
+  contactLinks as portfolioContactLinks,
+  profile as portfolioProfile,
+  projects as portfolioProjects,
+  skillGroups as portfolioSkillGroups
+} from "./data/projects.js";
+
 const root = document.getElementById("root");
+const BASE_URL = import.meta.env.BASE_URL || "/";
 let contactLinks = [];
 let profile = {};
 let projects = [];
 let skillGroups = [];
 
+function asset(path = "") {
+  if (!path.startsWith("/assets/") && !path.startsWith("/thesis-site/")) return path;
+  return `${BASE_URL.replace(/\/$/, "")}${path}`;
+}
+
+function normalizeAssetPaths(value) {
+  if (Array.isArray(value)) return value.map((item) => normalizeAssetPaths(item));
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, normalizeAssetPaths(item)]));
+  }
+  return typeof value === "string" ? asset(value) : value;
+}
+
+function htmlWithAssetBase(markup) {
+  return markup
+    .replaceAll('src="/assets/', `src="${asset("/assets/").replace(/\/$/, "")}/`)
+    .replaceAll('href="/assets/', `href="${asset("/assets/").replace(/\/$/, "")}/`)
+    .replaceAll('src="/thesis-site/', `src="${asset("/thesis-site/").replace(/\/$/, "")}/`)
+    .replaceAll('href="/thesis-site/', `href="${asset("/thesis-site/").replace(/\/$/, "")}/`);
+}
+
+function setRootHtml(markup) {
+  root.innerHTML = htmlWithAssetBase(markup);
+}
+
 async function loadPortfolioData() {
-  const data = await import(`./data/projects.js?v=${Date.now()}`);
-  contactLinks = data.contactLinks;
-  profile = data.profile;
-  projects = data.projects;
-  skillGroups = data.skillGroups;
+  contactLinks = portfolioContactLinks;
+  profile = portfolioProfile;
+  projects = normalizeAssetPaths(portfolioProjects);
+  skillGroups = portfolioSkillGroups;
 }
 
 function tagList(items) {
@@ -31,7 +63,7 @@ function renderNavigation() {
 }
 
 function renderHome() {
-  root.innerHTML = `
+  setRootHtml(`
     <div class="app-shell surveillance-shell">
       ${renderNavigation()}
       ${renderButterflyGuide()}
@@ -111,7 +143,7 @@ function renderHome() {
       </main>
       <div class="glitch-transition" data-glitch-transition aria-hidden="true"></div>
     </div>
-  `;
+  `);
   bindProjectWallInteractions();
   bindButterflyGuide();
 }
@@ -149,7 +181,7 @@ function renderProject(slug) {
   const nextProject = projects[(index + 1) % projects.length];
   const theme = project.theme || {};
 
-  root.innerHTML = `
+  setRootHtml(`
     <div class="app-shell project-page-shell project-theme project-theme--${theme.themeName || "default"}" style="${themeVars(theme)}" data-page-mood="${theme.pageMood || ""}">
       ${renderNavigation()}
       ${renderButterflyGuide()}
@@ -191,7 +223,7 @@ function renderProject(slug) {
         </nav>
       </main>
     </div>
-  `;
+  `);
   bindButterflyGuide();
   bindPetPortfolioDemo();
   bindFrameSequences();
@@ -218,7 +250,7 @@ function renderButterflyField() {
 }
 
 function renderVaporAssetLayer(context = "home") {
-  const base = "/assets/vapor-assets/cropped";
+  const base = asset("/assets/vapor-assets/cropped");
   const homeAssets = [
     ["asset-window-system", "window-system.png"],
     ["asset-window-player", "window-now-playing.png"],
@@ -354,7 +386,7 @@ function renderGalleryImage(image, project, index) {
   }
 
   if (image?.type === "frameSequence") {
-    const src = `/thesis-site/assets/sticker-frames/${image.sequence}/${image.sequence}_00.png`;
+    const src = asset(`/thesis-site/assets/sticker-frames/${image.sequence}/${image.sequence}_00.png`);
     const alt = image.label || `${project.title} animated process capture ${index + 1}`;
     return `
       <button class="gallery-lightbox-trigger" type="button" data-lightbox-src="${src}" data-lightbox-alt="${alt}" aria-label="Open full image: ${alt}">
@@ -483,7 +515,7 @@ function petMeter(label, key, value, min, max, sliderImage = "") {
     return `
       <div class="ue-pet-slider ue-pet-slider-${key}" aria-label="${label}: ${value}">
         <span data-pet-meter="${key}" style="width: ${percent}%">
-          <img src="/thesis-site/assets/${sliderImage}" alt="" />
+          <img src="${asset(`/thesis-site/assets/${sliderImage}`)}" alt="" />
         </span>
       </div>
       <strong class="ue-pet-value ue-pet-value-${key}" data-pet-value="${key}">${value}</strong>
@@ -524,19 +556,19 @@ function bindPetPortfolioDemo() {
   const actionMap = {
     feed: {
       title: "Feed",
-      video: "/thesis-site/assets/animation/Feedback_Feed.mp4",
+      video: asset("/thesis-site/assets/animation/Feedback_Feed.mp4"),
       delta: { mood: 1, hunger: 3, mischief: -1 },
       message: "Feed increases Hungry value to Full value."
     },
     toy: {
       title: "Toy",
-      video: "/thesis-site/assets/animation/Feedback_Toy.mp4",
+      video: asset("/thesis-site/assets/animation/Feedback_Toy.mp4"),
       delta: { mood: 2, hunger: -1, mischief: -2 },
       message: "Toy improves Mood and lowers Mischief, so it is best before risk becomes extreme."
     },
     notice: {
       title: "Notice",
-      video: "/thesis-site/assets/animation/Feedback_Notice.mp4",
+      video: asset("/thesis-site/assets/animation/Feedback_Notice.mp4"),
       delta: { mood: -2, hunger: 0, mischief: -3 },
       message: "Notice suppresses Mischief strongly, but Mood drops because the intervention is harsh."
     }
@@ -757,7 +789,7 @@ function bindFrameSequences() {
 
     const frames = Array.from({ length: count }, (_, index) => {
       const frameNumber = String(index).padStart(2, "0");
-      return `/thesis-site/assets/sticker-frames/${sequence}/${sequence}_${frameNumber}.png`;
+      return asset(`/thesis-site/assets/sticker-frames/${sequence}/${sequence}_${frameNumber}.png`);
     });
     const cache = frames.map((src) => {
       const image = new Image();

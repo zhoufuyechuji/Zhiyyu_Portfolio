@@ -1959,7 +1959,7 @@ body::before {
 .surveillance-shell {
   background:
     linear-gradient(180deg, rgba(20, 16, 95, 0.18), rgba(26, 10, 74, 0.64)),
-    url("/assets/backgrounds/web1.png") center / cover fixed;
+    url("../assets/backgrounds/web1.png") center / cover fixed;
 }
 
 .surveillance-shell::after {
@@ -2005,7 +2005,7 @@ body::before {
   padding: 132px clamp(24px, 5vw, 70px) 72px;
   background:
     linear-gradient(90deg, rgba(22, 20, 104, 0.16), rgba(255, 114, 214, 0.08)),
-    url("/assets/backgrounds/web1.png") center / cover;
+    url("../assets/backgrounds/web1.png") center / cover;
 }
 
 .profile-room::before {
@@ -2035,7 +2035,7 @@ body::before {
   border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(77, 74, 191, 0.18), rgba(32, 18, 98, 0.3)),
-    url("/assets/backgrounds/web2.png") center / cover;
+    url("../assets/backgrounds/web2.png") center / cover;
   box-shadow:
     0 35px 110px rgba(33, 13, 122, 0.36),
     inset 0 0 48px rgba(255, 198, 255, 0.15);
@@ -2091,7 +2091,7 @@ body::before {
   padding: 118px clamp(22px, 4vw, 74px) 120px;
   background:
     linear-gradient(180deg, rgba(40, 24, 128, 0.1), rgba(30, 9, 86, 0.52)),
-    url("/assets/backgrounds/web3.png") center / cover;
+    url("../assets/backgrounds/web3.png") center / cover;
 }
 
 .project-wall.scene-panel::before,
@@ -2110,7 +2110,7 @@ body::before {
   border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(117, 108, 223, 0.12), rgba(52, 36, 141, 0.3)),
-    url("/assets/backgrounds/web3.png") center / cover;
+    url("../assets/backgrounds/web3.png") center / cover;
   box-shadow:
     0 0 0 1px rgba(101, 231, 255, 0.16),
     0 45px 120px rgba(26, 8, 102, 0.5),
@@ -2252,7 +2252,7 @@ body::before {
 
 .glitch-transition {
   background:
-    url("/assets/backgrounds/web2.png") center / cover,
+    url("../assets/backgrounds/web2.png") center / cover,
     linear-gradient(90deg, rgba(255, 117, 212, 0.42), transparent 22%, rgba(101, 231, 255, 0.32) 78%, transparent),
     repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px 5px);
   mix-blend-mode: screen;
@@ -2323,7 +2323,7 @@ body::before {
 .skill-archive {
   background:
     linear-gradient(180deg, rgba(69, 48, 168, 0.2), rgba(19, 12, 80, 0.5)),
-    url("/assets/backgrounds/web2.png") center / cover;
+    url("../assets/backgrounds/web2.png") center / cover;
   border-radius: 22px;
   padding: 42px;
 }
@@ -2386,14 +2386,14 @@ body::after {
   background:
     radial-gradient(circle at 52% 36%, rgba(255, 255, 255, 0.08), transparent 16rem),
     linear-gradient(180deg, rgba(0, 5, 13, 0.34), rgba(0, 0, 0, 0.78)),
-    url("/assets/backgrounds/butterfly-blue-glow.png") center / cover fixed;
+    url("../assets/backgrounds/butterfly-blue-glow.png") center / cover fixed;
 }
 
 .project-page-shell {
   background:
     radial-gradient(circle at 72% 18%, rgba(126, 203, 255, 0.16), transparent 22rem),
     linear-gradient(180deg, rgba(0, 4, 12, 0.58), rgba(0, 0, 0, 0.86)),
-    url("/assets/backgrounds/butterfly-blue-glow.png") center / cover fixed;
+    url("../assets/backgrounds/butterfly-blue-glow.png") center / cover fixed;
 }
 
 .project-page-shell::before {
@@ -2447,7 +2447,7 @@ body::after {
   background:
     radial-gradient(circle at 68% 30%, rgba(255, 255, 255, 0.11), transparent 13rem),
     linear-gradient(90deg, rgba(0, 4, 12, 0.38), rgba(5, 28, 54, 0.2)),
-    url("/assets/backgrounds/butterfly-blue-glow.png") center / cover;
+    url("../assets/backgrounds/butterfly-blue-glow.png") center / cover;
 }
 
 .profile-room::before,
@@ -2481,7 +2481,7 @@ body::after {
 .profile-room__stage {
   background:
     linear-gradient(180deg, rgba(0, 8, 20, 0.22), rgba(0, 0, 0, 0.54)),
-    url("/assets/backgrounds/butterfly-silhouettes.png") center / min(800px, 88%) no-repeat,
+    url("../assets/backgrounds/butterfly-silhouettes.png") center / min(800px, 88%) no-repeat,
     radial-gradient(circle at 50% 54%, rgba(126, 203, 255, 0.16), transparent 18rem),
     #000;
 }
@@ -2528,7 +2528,7 @@ body::after {
 .project-wall.scene-panel {
   background:
     linear-gradient(180deg, rgba(0, 3, 10, 0.2), rgba(0, 0, 0, 0.7)),
-    url("/assets/backgrounds/butterfly-moodboard.png") center / cover;
+    url("../assets/backgrounds/butterfly-moodboard.png") center / cover;
 }
 
 .project-wall .evidence-wall__board {
@@ -2600,7 +2600,7 @@ body::after {
 
 .glitch-transition {
   background:
-    url("/assets/backgrounds/butterfly-blue-glow.png") center / cover,
+    url("../assets/backgrounds/butterfly-blue-glow.png") center / cover,
     linear-gradient(90deg, rgba(255, 255, 255, 0.35), transparent 22%, rgba(126, 203, 255, 0.34) 78%, transparent),
     repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px 5px);
 }
@@ -2609,7 +2609,7 @@ body::after {
 .skill-archive {
   background:
     linear-gradient(180deg, rgba(0, 8, 20, 0.42), rgba(0, 0, 0, 0.72)),
-    url("/assets/backgrounds/butterfly-blue-glow.png") center / cover;
+    url("../assets/backgrounds/butterfly-blue-glow.png") center / cover;
 }
 
 .butterfly-field {
@@ -2780,7 +2780,7 @@ body::after {
 body {
   background:
     linear-gradient(180deg, rgba(8, 14, 28, 0.22), rgba(7, 9, 20, 0.72)),
-    url("/assets/backgrounds/vaporwave-home.png") center / cover fixed;
+    url("../assets/backgrounds/vaporwave-home.png") center / cover fixed;
 }
 
 body::before {
@@ -2803,7 +2803,7 @@ body::after {
 .project-page-shell {
   background:
     linear-gradient(180deg, rgba(9, 15, 30, 0.14), rgba(9, 15, 30, 0.72)),
-    url("/assets/backgrounds/vaporwave-home.png") center / cover fixed;
+    url("../assets/backgrounds/vaporwave-home.png") center / cover fixed;
 }
 
 .surveillance-shell::after {
@@ -2850,7 +2850,7 @@ body::after {
 .profile-room {
   background:
     linear-gradient(180deg, rgba(9, 15, 30, 0.1), rgba(9, 15, 30, 0.66)),
-    url("/assets/backgrounds/vaporwave-home.png") center / cover;
+    url("../assets/backgrounds/vaporwave-home.png") center / cover;
 }
 
 .profile-room::before,
@@ -2950,7 +2950,7 @@ body::after {
 .project-wall.scene-panel {
   background:
     linear-gradient(180deg, rgba(9, 15, 30, 0.2), rgba(9, 15, 30, 0.76)),
-    url("/assets/backgrounds/vaporwave-home.png") center / cover;
+    url("../assets/backgrounds/vaporwave-home.png") center / cover;
 }
 
 .project-wall .evidence-wall__board {
@@ -3048,7 +3048,7 @@ body::after {
 
 .glitch-transition {
   background:
-    url("/assets/backgrounds/vaporwave-home.png") center / cover,
+    url("../assets/backgrounds/vaporwave-home.png") center / cover,
     repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 4px),
     linear-gradient(90deg, rgba(255, 126, 173, 0.32), transparent 28%, rgba(134, 214, 239, 0.28));
 }
@@ -4803,7 +4803,7 @@ body::after {
   box-sizing: border-box;
   border: 5px solid var(--ue-deep);
   border-radius: 8px;
-  background: #ffe7ef url("/thesis-site/assets/UI_monitor_Insidebg_ALERTED.png") center / cover no-repeat;
+  background: #ffe7ef url("../thesis-site/assets/UI_monitor_Insidebg_ALERTED.png") center / cover no-repeat;
   box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.72);
 }
 
