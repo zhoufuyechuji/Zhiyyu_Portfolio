@@ -34,6 +34,8 @@ jobs:
 
       - name: Build
         run: pnpm run build
+        env:
+          SITE_BASE: /Zhiyyu_Portfolio/
 
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
