@@ -2612,6 +2612,21 @@ body::after {
     url("../assets/backgrounds/butterfly-blue-glow.png") center / cover;
 }
 
+.terminal-contact.contact-transmission {
+  min-height: auto;
+  padding-block: clamp(34px, 5.5vw, 64px);
+}
+
+.terminal-contact.contact-transmission p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .terminal-contact.contact-transmission {
+    padding-block: 30px;
+  }
+}
+
 .butterfly-field {
   position: fixed;
   inset: 0;
@@ -3548,7 +3563,15 @@ body::after {
 
 @media (max-width: 900px) {
   .project-wall .evidence-wall__board {
-    min-height: 0;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    align-items: start !important;
+    min-height: auto !important;
+    height: auto !important;
+    gap: 24px !important;
+    padding: 24px clamp(10px, 3vw, 18px) 34px !important;
+    overflow: visible !important;
   }
 
   .project-wall .evidence-card,
@@ -3565,7 +3588,20 @@ body::after {
     right: auto;
     top: auto;
     bottom: auto;
-    width: 100%;
+    inset: auto;
+    width: min(100%, 360px) !important;
+    max-width: calc(100vw - 44px);
+    margin-inline: auto;
+    transform: rotate(var(--mobile-r, 0deg)) !important;
+  }
+
+  .project-wall .connection-lines,
+  .project-wall .wall-lamp {
+    display: none;
+  }
+
+  .project-wall .evidence-card__image {
+    height: clamp(168px, 52vw, 238px);
   }
 }
 
@@ -5690,7 +5726,15 @@ body::after {
 
 @media (max-width: 900px) {
   .project-wall .evidence-wall__board {
-    min-height: 0;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    align-items: start !important;
+    min-height: auto !important;
+    height: auto !important;
+    gap: 24px !important;
+    padding: 24px clamp(10px, 3vw, 18px) 34px !important;
+    overflow: visible !important;
   }
 
   .project-wall .evidence-card,
@@ -5707,7 +5751,20 @@ body::after {
     right: auto;
     top: auto;
     bottom: auto;
-    width: 100%;
+    inset: auto;
+    width: min(100%, 360px) !important;
+    max-width: calc(100vw - 44px);
+    margin-inline: auto;
+    transform: rotate(var(--mobile-r, 0deg)) !important;
+  }
+
+  .project-wall .connection-lines,
+  .project-wall .wall-lamp {
+    display: none;
+  }
+
+  .project-wall .evidence-card__image {
+    height: clamp(168px, 52vw, 238px);
   }
 }
 

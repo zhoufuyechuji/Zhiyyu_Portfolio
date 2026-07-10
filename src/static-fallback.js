@@ -136,9 +136,6 @@ function renderHome() {
           <span>CONTACT / TRANSMISSION AREA</span>
           <h2>Secure Transmission</h2>
           <p>Open a channel for collaborations, design roles, or portfolio conversations.</p>
-          <div class="terminal-contact__links">
-            ${contactLinks.map((link) => `<a href="${link.href}">${link.label}</a>`).join("")}
-          </div>
         </section>
       </main>
       <div class="glitch-transition" data-glitch-transition aria-hidden="true"></div>
