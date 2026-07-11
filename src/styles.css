@@ -3166,6 +3166,10 @@ body::after {
   z-index: 12;
 }
 
+.vapor-asset-layer--home {
+  z-index: 6;
+}
+
 .project-page-shell .vapor-asset-layer {
   display: none;
 }
@@ -3191,9 +3195,10 @@ body::after {
 }
 
 .asset-window-player {
-  right: 4vw;
-  top: 8vh;
-  width: clamp(220px, 20vw, 360px);
+  right: -1vw;
+  top: 3vh;
+  width: clamp(190px, 17vw, 310px);
+  opacity: 0.58;
   animation-delay: -5s;
 }
 
