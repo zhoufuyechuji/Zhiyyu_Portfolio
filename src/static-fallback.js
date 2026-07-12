@@ -65,6 +65,7 @@ function renderNavigation() {
 function renderHome() {
   setRootHtml(`
     <div class="app-shell surveillance-shell">
+      ${renderEntryGate()}
       ${renderNavigation()}
       ${renderButterflyGuide()}
       <main class="scene-camera" data-scene-camera>
@@ -144,6 +145,31 @@ function renderHome() {
   bindProjectWallInteractions();
   bindButterflyGuide();
   bindTransmissionCleanup();
+  bindEntryGate();
+}
+
+function renderEntryGate() {
+  return `
+    <section class="entry-gate" data-entry-gate role="dialog" aria-modal="true" aria-labelledby="entry-gate-title">
+      <div class="entry-gate__noise" aria-hidden="true"></div>
+      <div class="entry-gate__window">
+        <div class="entry-gate__titlebar">
+          <span>PORTFOLIO_START.EXE</span>
+          <span aria-hidden="true">_ □ ×</span>
+        </div>
+        <div class="entry-gate__screen">
+          <span class="entry-gate__eyebrow">SYSTEM MESSAGE / USER CONFIRMATION</span>
+          <h2 id="entry-gate-title">Do you want to enter this portfolio?</h2>
+          <p>Signal detected. Select YES to load Zhiyun Yu's project world.</p>
+          <div class="entry-gate__actions">
+            <button type="button" data-enter-portfolio>YES</button>
+            <button type="button" data-enter-portfolio>YES</button>
+            <button type="button" data-enter-portfolio>YES</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 function renderCard(project, index) {
@@ -929,6 +955,27 @@ function bindButterflyGuide() {
       document.querySelector(next)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 40);
   });
+}
+
+function bindEntryGate() {
+  const gate = document.querySelector("[data-entry-gate]");
+  if (!gate) return;
+
+  const enterPortfolio = () => {
+    gate.classList.add("is-leaving");
+    gate.setAttribute("aria-hidden", "true");
+    window.setTimeout(() => gate.remove(), 520);
+  };
+
+  gate.querySelectorAll("[data-enter-portfolio]").forEach((button) => {
+    button.addEventListener("click", enterPortfolio);
+  });
+
+  gate.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") enterPortfolio();
+  });
+
+  window.setTimeout(() => gate.querySelector("[data-enter-portfolio]")?.focus(), 80);
 }
 
 function bindTransmissionCleanup() {
