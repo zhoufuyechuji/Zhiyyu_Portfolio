@@ -166,7 +166,7 @@ function renderEntryGate() {
       <div class="entry-gate__window">
         <div class="entry-gate__titlebar">
           <span>PORTFOLIO_START.EXE</span>
-          <span aria-hidden="true">_ [ ] X</span>
+          <span aria-hidden="true">X</span>
         </div>
         <div class="entry-gate__screen">
           <span class="entry-gate__eyebrow">SYSTEM MESSAGE / USER CONFIRMATION</span>
