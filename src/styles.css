@@ -80,6 +80,8 @@ iframe {
   position: fixed;
   inset: 0;
   z-index: 120;
+  --entry-cursor-x: 50vw;
+  --entry-cursor-y: 50vh;
   display: grid;
   place-items: center;
   padding: clamp(18px, 4vw, 48px);
@@ -88,6 +90,7 @@ iframe {
     radial-gradient(circle at 70% 62%, rgba(93, 184, 225, 0.14), transparent 24%),
     linear-gradient(180deg, rgba(5, 7, 20, 0.96), rgba(1, 3, 10, 0.98));
   color: #ffeafd;
+  cursor: none;
   overflow: hidden;
   transition: opacity 420ms ease, filter 420ms ease, transform 420ms ease;
 }
@@ -108,14 +111,100 @@ iframe {
   position: absolute;
   inset: -20%;
   background:
+    radial-gradient(circle at 30% 20%, rgba(255, 198, 236, 0.18), transparent 12%),
+    radial-gradient(circle at 72% 70%, rgba(134, 214, 239, 0.16), transparent 14%),
     linear-gradient(90deg, transparent, rgba(255, 126, 173, 0.14), transparent),
     repeating-linear-gradient(0deg, rgba(134, 214, 239, 0.12) 0 1px, transparent 1px 17px);
   animation: entryGateNoise 5s steps(4, end) infinite;
   opacity: 0.48;
 }
 
+.entry-gate__popups {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.entry-gate__popup {
+  position: absolute;
+  display: block;
+  max-width: none;
+  image-rendering: pixelated;
+  opacity: 0.72;
+  filter:
+    drop-shadow(3px 0 rgba(134, 214, 239, 0.25))
+    drop-shadow(-3px 0 rgba(255, 126, 173, 0.25))
+    drop-shadow(0 16px 22px rgba(0, 0, 0, 0.28));
+  animation: entryPopupFloat 7.5s steps(5, end) infinite;
+}
+
+.entry-gate__popup--player {
+  right: 4vw;
+  top: 7vh;
+  width: clamp(180px, 22vw, 350px);
+  animation-delay: -2s;
+}
+
+.entry-gate__popup--note {
+  left: 5vw;
+  top: 16vh;
+  width: clamp(150px, 17vw, 270px);
+  transform: rotate(-3deg);
+  animation-delay: -5s;
+}
+
+.entry-gate__popup--dialog {
+  right: 9vw;
+  bottom: 13vh;
+  width: clamp(170px, 20vw, 315px);
+  transform: rotate(2deg);
+  animation-delay: -3s;
+}
+
+.entry-gate__popup--system {
+  left: 8vw;
+  bottom: 10vh;
+  width: clamp(150px, 16vw, 260px);
+  opacity: 0.62;
+  animation-delay: -7s;
+}
+
+.entry-gate__cursor {
+  position: fixed;
+  left: var(--entry-cursor-x);
+  top: var(--entry-cursor-y);
+  z-index: 4;
+  width: 34px;
+  height: 44px;
+  pointer-events: none;
+  transform: translate(8px, 8px) rotate(-8deg);
+  transition: filter 160ms ease, scale 160ms ease;
+  filter:
+    drop-shadow(2px 0 rgba(134, 214, 239, 0.78))
+    drop-shadow(-2px 0 rgba(255, 126, 173, 0.68))
+    drop-shadow(4px 4px 0 rgba(51, 45, 96, 0.78));
+}
+
+.entry-gate__cursor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 0 88%, 28% 68%, 45% 100%, 62% 92%, 46% 62%, 86% 62%);
+  background: linear-gradient(135deg, #fff5ff 0%, #ffc7ea 42%, #86d6ef 100%);
+}
+
+.entry-gate.is-cursor-active .entry-gate__cursor {
+  scale: 1.22;
+  filter:
+    drop-shadow(0 0 12px rgba(255, 244, 255, 0.86))
+    drop-shadow(3px 0 rgba(134, 214, 239, 0.92))
+    drop-shadow(-3px 0 rgba(255, 126, 173, 0.86))
+    drop-shadow(4px 4px 0 rgba(51, 45, 96, 0.78));
+}
+
 .entry-gate__window {
   position: relative;
+  z-index: 3;
   width: min(680px, 92vw);
   border: 3px solid rgba(255, 198, 236, 0.86);
   background: rgba(13, 16, 38, 0.92);
@@ -192,7 +281,7 @@ iframe {
   font-size: 15px;
   font-weight: 900;
   box-shadow: 4px 4px 0 rgba(57, 52, 104, 0.88);
-  cursor: pointer;
+  cursor: none;
 }
 
 .entry-gate__actions button:hover,
@@ -214,6 +303,51 @@ iframe {
   0%, 100% { transform: translate3d(0, 0, 0); }
   35% { transform: translate3d(2%, -1%, 0); }
   70% { transform: translate3d(-1%, 1%, 0); }
+}
+
+@keyframes entryPopupFloat {
+  0%, 100% {
+    translate: 0 0;
+    clip-path: inset(0);
+  }
+  36% {
+    translate: 8px -6px;
+    clip-path: inset(0);
+  }
+  38% {
+    translate: -4px 3px;
+    clip-path: inset(7% 0 4% 0);
+  }
+  72% {
+    translate: 3px 6px;
+    clip-path: inset(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .entry-gate__popup {
+    opacity: 0.34;
+  }
+
+  .entry-gate__popup--player {
+    right: -18vw;
+    top: 6vh;
+  }
+
+  .entry-gate__popup--note {
+    left: -16vw;
+    top: 13vh;
+  }
+
+  .entry-gate__popup--dialog {
+    right: -20vw;
+    bottom: 9vh;
+  }
+
+  .entry-gate__popup--system {
+    left: -18vw;
+    bottom: 8vh;
+  }
 }
 
 .app-shell {

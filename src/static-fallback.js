@@ -156,14 +156,21 @@ function renderEntryGate() {
   return `
     <section class="entry-gate" data-entry-gate role="dialog" aria-modal="true" aria-labelledby="entry-gate-title">
       <div class="entry-gate__noise" aria-hidden="true"></div>
+      <div class="entry-gate__popups" aria-hidden="true">
+        <img class="entry-gate__popup entry-gate__popup--player" src="/assets/vapor-assets/cropped/window-now-playing.png" alt="" />
+        <img class="entry-gate__popup entry-gate__popup--note" src="/assets/vapor-assets/cropped/window-note.png" alt="" />
+        <img class="entry-gate__popup entry-gate__popup--dialog" src="/assets/vapor-assets/cropped/ui-dialog.png" alt="" />
+        <img class="entry-gate__popup entry-gate__popup--system" src="/assets/vapor-assets/cropped/ui-system.png" alt="" />
+      </div>
+      <div class="entry-gate__cursor" data-entry-cursor aria-hidden="true"></div>
       <div class="entry-gate__window">
         <div class="entry-gate__titlebar">
           <span>PORTFOLIO_START.EXE</span>
-          <span aria-hidden="true">_ □ ×</span>
+          <span aria-hidden="true">_ [ ] X</span>
         </div>
         <div class="entry-gate__screen">
           <span class="entry-gate__eyebrow">SYSTEM MESSAGE / USER CONFIRMATION</span>
-          <h2 id="entry-gate-title">开始了解我</h2>
+          <h2 id="entry-gate-title">Would you like to get to know me?</h2>
           <p>Signal detected. Select YES to load Zhiyun Yu's project world.</p>
           <div class="entry-gate__actions">
             <button type="button" data-enter-portfolio>YES</button>
@@ -964,12 +971,23 @@ function bindButterflyGuide() {
 function bindEntryGate() {
   const gate = document.querySelector("[data-entry-gate]");
   if (!gate) return;
+  const cursor = gate.querySelector("[data-entry-cursor]");
 
   const enterPortfolio = () => {
     gate.classList.add("is-leaving");
     gate.setAttribute("aria-hidden", "true");
     window.setTimeout(() => gate.remove(), 520);
   };
+
+  const moveCursor = (event) => {
+    if (!cursor) return;
+    gate.style.setProperty("--entry-cursor-x", `${event.clientX}px`);
+    gate.style.setProperty("--entry-cursor-y", `${event.clientY}px`);
+    gate.classList.toggle("is-cursor-active", Boolean(event.target.closest("[data-enter-portfolio]")));
+  };
+
+  gate.addEventListener("pointermove", moveCursor);
+  gate.addEventListener("pointerleave", () => gate.classList.remove("is-cursor-active"));
 
   gate.querySelectorAll("[data-enter-portfolio]").forEach((button) => {
     button.addEventListener("click", enterPortfolio);
