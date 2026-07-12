@@ -163,7 +163,7 @@ function renderEntryGate() {
         </div>
         <div class="entry-gate__screen">
           <span class="entry-gate__eyebrow">SYSTEM MESSAGE / USER CONFIRMATION</span>
-          <h2 id="entry-gate-title">Do you want to enter this portfolio?</h2>
+          <h2 id="entry-gate-title">开始了解我</h2>
           <p>Signal detected. Select YES to load Zhiyun Yu's project world.</p>
           <div class="entry-gate__actions">
             <button type="button" data-enter-portfolio>YES</button>
