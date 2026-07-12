@@ -16,6 +16,8 @@
   --mono: "Courier New", "Lucida Console", ui-monospace, monospace;
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --cursor-default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M3 2L3 20L8 15L11 22L14 21L11 14L18 14Z' fill='%23ffe6fb' stroke='%236b6aa8' stroke-width='1.5'/%3E%3Cpath d='M5 4L5 15L8 12L10 17' fill='none' stroke='%2386d6ef' stroke-width='1'/%3E%3C/svg%3E") 3 2, auto;
+  --cursor-action: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M3 2L3 20L8 15L11 22L14 21L11 14L18 14Z' fill='%2386d6ef' stroke='%23ffc7ea' stroke-width='1.7'/%3E%3Cpath d='M5 4L5 15L8 12L10 17' fill='none' stroke='%23fff5ff' stroke-width='1'/%3E%3C/svg%3E") 3 2, pointer;
 }
 
 * {
@@ -24,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: var(--cursor-default);
 }
 
 body {
@@ -35,6 +38,7 @@ body {
     radial-gradient(circle at 78% 80%, rgba(168, 53, 55, 0.12), transparent 22rem),
     linear-gradient(180deg, #050706 0%, #10130f 55%, #080705 100%);
   font-family: var(--sans);
+  cursor: var(--cursor-default);
 }
 
 body::before,
@@ -64,6 +68,18 @@ body::after {
 button,
 a {
   font: inherit;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+summary,
+[data-project-card],
+[data-enter-portfolio] {
+  cursor: var(--cursor-action) !important;
 }
 
 a {
@@ -174,10 +190,10 @@ iframe {
   left: var(--entry-cursor-x);
   top: var(--entry-cursor-y);
   z-index: 4;
-  width: 34px;
-  height: 44px;
+  width: 26px;
+  height: 34px;
   pointer-events: none;
-  transform: translate(8px, 8px) rotate(-8deg);
+  transform: translate(7px, 7px) rotate(-8deg);
   transition: filter 160ms ease, scale 160ms ease;
   filter:
     drop-shadow(2px 0 rgba(134, 214, 239, 0.78))
@@ -194,7 +210,7 @@ iframe {
 }
 
 .entry-gate.is-cursor-active .entry-gate__cursor {
-  scale: 1.22;
+  scale: 1.14;
   filter:
     drop-shadow(0 0 12px rgba(255, 244, 255, 0.86))
     drop-shadow(3px 0 rgba(134, 214, 239, 0.92))
@@ -205,32 +221,65 @@ iframe {
 .entry-gate__window {
   position: relative;
   z-index: 3;
-  width: min(680px, 92vw);
-  border: 3px solid rgba(255, 198, 236, 0.86);
-  background: rgba(13, 16, 38, 0.92);
+  width: min(620px, 91vw);
+  border: 0;
+  padding: 2px;
+  background:
+    linear-gradient(135deg, rgba(255, 217, 246, 0.92), rgba(134, 214, 239, 0.62) 34%, rgba(255, 126, 173, 0.78) 66%, rgba(88, 88, 150, 0.88));
+  clip-path: polygon(22px 0, 100% 0, 100% calc(100% - 28px), calc(100% - 30px) 100%, 0 100%, 0 22px);
   box-shadow:
-    8px 8px 0 rgba(80, 78, 142, 0.72),
-    0 0 42px rgba(255, 126, 173, 0.24),
-    inset 0 0 36px rgba(134, 214, 239, 0.08);
+    12px 14px 0 rgba(50, 45, 100, 0.56),
+    0 0 48px rgba(255, 126, 173, 0.22),
+    0 0 78px rgba(134, 214, 239, 0.14);
+}
+
+.entry-gate__window::before,
+.entry-gate__window::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 72px;
+  height: 3px;
+  background: rgba(255, 244, 255, 0.82);
+  box-shadow: 0 0 16px rgba(255, 198, 236, 0.45);
+  pointer-events: none;
+}
+
+.entry-gate__window::before {
+  right: 22px;
+  top: 16px;
+}
+
+.entry-gate__window::after {
+  left: 22px;
+  bottom: 18px;
 }
 
 .entry-gate__titlebar {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  padding: 10px 14px;
-  border-bottom: 3px solid rgba(255, 198, 236, 0.86);
-  background: linear-gradient(90deg, #4a5794, #eaa3d0);
+  padding: 10px 16px 6px;
+  border-bottom: 0;
+  background:
+    linear-gradient(90deg, rgba(73, 87, 148, 0.96), rgba(234, 163, 208, 0.72)),
+    rgba(12, 15, 37, 0.88);
   color: #fff4ff;
   font-family: var(--mono);
-  font-size: clamp(12px, 1.4vw, 15px);
+  font-size: clamp(11px, 1.2vw, 14px);
   text-shadow: 2px 0 rgba(42, 51, 100, 0.8);
+  clip-path: polygon(18px 0, 100% 0, 100% 100%, 0 100%, 0 14px);
 }
 
 .entry-gate__screen {
   display: grid;
-  gap: 18px;
-  padding: clamp(26px, 4vw, 46px);
+  gap: 16px;
+  margin: 0;
+  padding: clamp(24px, 3.5vw, 40px) clamp(22px, 4vw, 42px) clamp(28px, 4vw, 44px);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 198, 236, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(9, 12, 31, 0.96), rgba(8, 10, 26, 0.91));
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), calc(100% - 28px) 100%, 0 100%);
   text-align: center;
 }
 
@@ -244,14 +293,16 @@ iframe {
 
 .entry-gate h2 {
   margin: 0;
+  max-width: 520px;
+  justify-self: center;
   color: #fff3fb;
   font-family: var(--display);
-  font-size: clamp(34px, 6vw, 72px);
-  line-height: 0.92;
+  font-size: clamp(30px, 4.8vw, 58px);
+  line-height: 0.96;
   text-shadow:
-    4px 0 rgba(134, 214, 239, 0.5),
-    -4px 0 rgba(255, 126, 173, 0.56),
-    0 0 22px rgba(255, 198, 236, 0.34);
+    3px 0 rgba(134, 214, 239, 0.48),
+    -3px 0 rgba(255, 126, 173, 0.52),
+    0 0 18px rgba(255, 198, 236, 0.28);
 }
 
 .entry-gate p {
