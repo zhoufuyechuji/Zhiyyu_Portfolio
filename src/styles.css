@@ -2613,8 +2613,20 @@ body::after {
 }
 
 .terminal-contact.contact-transmission {
+  position: relative;
+  z-index: 30;
+  isolation: isolate;
+  overflow: hidden;
   min-height: auto;
   padding-block: clamp(34px, 5.5vw, 64px);
+  background:
+    linear-gradient(180deg, rgba(8, 10, 24, 0.94), rgba(5, 7, 18, 0.96)),
+    url("../assets/backgrounds/butterfly-blue-glow.png") center / cover !important;
+}
+
+.terminal-contact.contact-transmission > * {
+  position: relative;
+  z-index: 2;
 }
 
 .terminal-contact.contact-transmission p {
@@ -2633,6 +2645,14 @@ body::after {
   z-index: 4;
   pointer-events: none;
   overflow: hidden;
+}
+
+.is-transmission-visible .vapor-asset-layer--home,
+.is-transmission-visible .guide-butterfly {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 260ms ease, visibility 260ms ease;
 }
 
 .butterfly-field span,

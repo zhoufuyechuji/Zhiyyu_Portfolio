@@ -143,6 +143,7 @@ function renderHome() {
   `);
   bindProjectWallInteractions();
   bindButterflyGuide();
+  bindTransmissionCleanup();
 }
 
 function renderCard(project, index) {
@@ -928,6 +929,21 @@ function bindButterflyGuide() {
       document.querySelector(next)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 40);
   });
+}
+
+function bindTransmissionCleanup() {
+  document.body.classList.remove("is-transmission-visible");
+  const transmission = document.querySelector("#transmission");
+  if (!transmission || !("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      document.body.classList.toggle("is-transmission-visible", entry.isIntersecting && entry.intersectionRatio > 0.28);
+    },
+    { threshold: [0, 0.28, 0.55] }
+  );
+
+  observer.observe(transmission);
 }
 
 let focusedProjectSlug = "";
