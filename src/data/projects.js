@@ -183,7 +183,6 @@ export const projects = [
       { title: "Puzzle Structure", body: "Environmental puzzles use fragile points, hidden fragments, and layered clues." }
     ],
     galleryImages: [
-      "/assets/projects/gdd-city-of-illusion-english-2024/image-01.png",
       "/assets/projects/gdd-city-of-illusion-english-2024/image-05.png",
       "/assets/projects/gdd-city-of-illusion-english-2024/image-06.jpg",
       "/assets/projects/gdd-city-of-illusion-english-2024/image-07.png",
