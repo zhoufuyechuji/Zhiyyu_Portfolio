@@ -2773,9 +2773,42 @@ body::after {
   margin-bottom: 0;
 }
 
+.contact-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-lines a {
+  border: 2px solid rgba(255, 198, 236, 0.78);
+  padding: 10px 13px;
+  color: #fff4ff;
+  background:
+    linear-gradient(180deg, rgba(255, 198, 236, 0.18), rgba(93, 105, 180, 0.18)),
+    rgba(12, 16, 38, 0.72);
+  font-family: var(--mono);
+  font-size: clamp(12px, 1.15vw, 15px);
+  text-decoration: none;
+  text-shadow: 2px 0 rgba(134, 214, 239, 0.42);
+  box-shadow: 4px 4px 0 rgba(70, 65, 126, 0.54);
+}
+
+.contact-lines a:hover,
+.contact-lines a:focus-visible {
+  color: #2c2753;
+  background: linear-gradient(180deg, #fff2fb, #ffc5e8 58%, #8fdfff);
+  outline: 2px solid #fff7ff;
+  outline-offset: 3px;
+}
+
 @media (max-width: 900px) {
   .terminal-contact.contact-transmission {
     padding-block: 30px;
+  }
+
+  .contact-lines {
+    display: grid;
   }
 }
 

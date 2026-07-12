@@ -56,7 +56,7 @@ function renderNavigation() {
         <a href="#profile-room">Profile Room</a>
         <a href="#projects">Project Wall</a>
         <a href="#skills">Project Archive</a>
-        <a href="#transmission">Transmission</a>
+        <a href="#transmission">Contact</a>
       </nav>
     </header>
   `;
@@ -134,9 +134,13 @@ function renderHome() {
         </section>
 
         <section class="terminal-contact contact-transmission scene-panel" id="transmission">
-          <span>CONTACT / TRANSMISSION AREA</span>
-          <h2>Secure Transmission</h2>
+          <span>CONTACT / PORTFOLIO CHANNEL</span>
+          <h2>Contact</h2>
           <p>Open a channel for collaborations, design roles, or portfolio conversations.</p>
+          <div class="contact-lines" aria-label="Contact information">
+            <a href="tel:+118052096260">Phone: +1 18052096260</a>
+            <a href="mailto:zhoufuyechuji@gmail.com">Email: zhoufuyechuji@gmail.com</a>
+          </div>
         </section>
       </main>
       <div class="glitch-transition" data-glitch-transition aria-hidden="true"></div>
