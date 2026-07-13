@@ -8,8 +8,8 @@ export const projects = [
     type: "MFA Thesis Prototype",
     tools: ["Unreal Engine 5.5", "Blueprint", "UX Research", "UI Design"],
     timeline: "2026",
-    thumbnail: "/thesis-site/assets/pet-status-board.png",
-    heroImage: "/thesis-site/assets/pet-status-board.png",
+    thumbnail: "/thesis-site/assets/UI_MainMenu_BG_2.png",
+    heroImage: "/thesis-site/assets/UI_MainMenu_BG_2.png",
     shortDescription:
       "A pet simulation thesis prototype about distant watching, restricted information, and risk prediction.",
     fullDescription:

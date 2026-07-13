@@ -466,6 +466,10 @@ function renderGalleryImage(image, project, index) {
 }
 
 function renderHeroMedia(project) {
+  if (project.slug === "tension-through-surveillance-restriction") {
+    return `<img src="${project.heroImage}" alt="${project.title} hero visual" />`;
+  }
+
   if (project.heroVideo) {
     return `
       <div class="hero-video-wrap">
