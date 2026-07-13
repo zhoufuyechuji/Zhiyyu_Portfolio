@@ -172,12 +172,17 @@ function renderEntryGate() {
           <span class="entry-gate__eyebrow">SYSTEM MESSAGE / USER CONFIRMATION</span>
           <h2 id="entry-gate-title">Would you like to get to know me?</h2>
           <p>Signal detected. Select YES to load Zhiyun Yu's project world.</p>
-          <div class="entry-gate__actions">
-            <button type="button" data-enter-portfolio>YES</button>
-            <button type="button" data-enter-portfolio>YES</button>
-            <button type="button" data-enter-portfolio>YES</button>
-          </div>
         </div>
+      </div>
+      <div class="entry-gate__actions" aria-label="Enter portfolio choices">
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
+        <button type="button" data-enter-portfolio>YES</button>
       </div>
     </section>
   `;
@@ -997,7 +1002,6 @@ function bindEntryGate() {
     if (event.key === "Enter") enterPortfolio();
   });
 
-  window.setTimeout(() => gate.querySelector("[data-enter-portfolio]")?.focus(), 80);
 }
 
 function bindTransmissionCleanup() {
