@@ -6007,6 +6007,25 @@ body::after {
   filter: none;
 }
 
+.project-theme--pet-electronic .image-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-theme--pet-electronic .image-gallery__item:has(.gallery-video) {
+  grid-column: 1 / -1;
+  width: min(1180px, 100%);
+  margin: 0 auto 16px;
+}
+
+.project-theme--pet-electronic .image-gallery__item .gallery-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: clamp(360px, 58vw, 680px);
+  object-fit: contain;
+  background: #070613;
+}
+
 .project-theme--pet-electronic .ue-demo {
   width: min(1160px, 100%);
   margin: 0 auto;

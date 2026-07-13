@@ -10,8 +10,6 @@ export const projects = [
     timeline: "2026",
     thumbnail: "/thesis-site/assets/pet-status-board.png",
     heroImage: "/thesis-site/assets/pet-status-board.png",
-    heroVideo: "/thesis-site/assets/studio-component-itgm-spring2026.mp4",
-    heroVideoLabel: "Studio Component gameplay video",
     shortDescription:
       "A pet simulation thesis prototype about distant watching, restricted information, and risk prediction.",
     fullDescription:
