@@ -8,8 +8,10 @@ export const projects = [
     type: "MFA Thesis Prototype",
     tools: ["Unreal Engine 5.5", "Blueprint", "UX Research", "UI Design"],
     timeline: "2026",
-    thumbnail: "/thesis-site/assets/monitor-inside-root.png",
-    heroImage: "/thesis-site/assets/monitor-inside-root.png",
+    thumbnail: "/thesis-site/assets/pet-status-board.png",
+    heroImage: "/thesis-site/assets/pet-status-board.png",
+    heroVideo: "/thesis-site/assets/studio-component-itgm-spring2026.mp4",
+    heroVideoLabel: "Studio Component gameplay video",
     shortDescription:
       "A pet simulation thesis prototype about distant watching, restricted information, and risk prediction.",
     fullDescription:
@@ -33,11 +35,15 @@ export const projects = [
       }
     ],
     galleryImages: [
-      "/thesis-site/assets/monitor-inside-root.png",
+      {
+        type: "video",
+        src: "/thesis-site/assets/studio-component-itgm-spring2026.mp4",
+        poster: "/thesis-site/assets/pet-status-board.png",
+        label: "Studio Component gameplay video"
+      },
       { type: "frameSequence", sequence: "walk", count: 20, delay: 80, label: "Cat walk animation" },
       { type: "frameSequence", sequence: "sleep", count: 60, delay: 100, label: "Cat sleep animation" },
       { type: "frameSequence", sequence: "warning", count: 30, delay: 80, label: "Cat warning animation" },
-      "/thesis-site/assets/PetUI.png",
       "/thesis-site/assets/pet-status-reference.png",
       "/thesis-site/assets/UI_Work_BG.png",
       "/thesis-site/assets/UI_monitor_Insidebg_ALERTED.png"
