@@ -154,9 +154,10 @@ iframe {
     radial-gradient(circle at 30% 20%, rgba(255, 198, 236, 0.18), transparent 12%),
     radial-gradient(circle at 72% 70%, rgba(134, 214, 239, 0.16), transparent 14%),
     linear-gradient(90deg, transparent, rgba(255, 126, 173, 0.14), transparent),
-    repeating-linear-gradient(0deg, rgba(134, 214, 239, 0.12) 0 1px, transparent 1px 17px);
-  animation: entryGateNoise 5s steps(4, end) infinite;
-  opacity: 0.48;
+    repeating-linear-gradient(0deg, rgba(134, 214, 239, 0.16) 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(90deg, rgba(255, 126, 173, 0.12) 0 1px, transparent 1px 47px);
+  animation: entryGateNoise 3.2s steps(5, end) infinite;
+  opacity: 0.62;
 }
 
 .entry-gate__popups {
@@ -213,7 +214,7 @@ iframe {
   position: fixed;
   left: var(--entry-cursor-x);
   top: var(--entry-cursor-y);
-  z-index: 4;
+  z-index: 30;
   width: 26px;
   height: 34px;
   pointer-events: none;
@@ -255,6 +256,7 @@ iframe {
     12px 14px 0 rgba(50, 45, 100, 0.56),
     0 0 48px rgba(255, 126, 173, 0.22),
     0 0 78px rgba(134, 214, 239, 0.14);
+  animation: entryWindowGlitch 4.2s steps(8, end) infinite;
 }
 
 .entry-gate__window::before,
@@ -296,6 +298,7 @@ iframe {
 }
 
 .entry-gate__screen {
+  position: relative;
   display: grid;
   gap: 16px;
   margin: 0;
@@ -305,6 +308,32 @@ iframe {
     linear-gradient(180deg, rgba(9, 12, 31, 0.96), rgba(8, 10, 26, 0.91));
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), calc(100% - 28px) 100%, 0 100%);
   text-align: center;
+  overflow: hidden;
+}
+
+.entry-gate__screen::before,
+.entry-gate__screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.entry-gate__screen::before {
+  background:
+    linear-gradient(90deg, transparent 0 34%, rgba(134, 214, 239, 0.18) 35%, transparent 40%),
+    repeating-linear-gradient(180deg, transparent 0 18px, rgba(255, 126, 173, 0.16) 18px 20px, transparent 20px 38px);
+  mix-blend-mode: screen;
+  opacity: 0.32;
+  animation: entryScreenTear 2.4s steps(6, end) infinite;
+}
+
+.entry-gate__screen::after {
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 244, 255, 0.24), transparent),
+    radial-gradient(circle at 82% 38%, rgba(134, 214, 239, 0.2), transparent 16%);
+  opacity: 0;
+  animation: entrySignalFlash 3.1s steps(7, end) infinite;
 }
 
 .entry-gate__eyebrow {
@@ -316,6 +345,7 @@ iframe {
 }
 
 .entry-gate h2 {
+  position: relative;
   margin: 0;
   max-width: 520px;
   justify-self: center;
@@ -327,6 +357,7 @@ iframe {
     3px 0 rgba(134, 214, 239, 0.48),
     -3px 0 rgba(255, 126, 173, 0.52),
     0 0 18px rgba(255, 198, 236, 0.28);
+  animation: entryTitleGlitch 2.7s steps(9, end) infinite;
 }
 
 .entry-gate p {
@@ -338,18 +369,16 @@ iframe {
 }
 
 .entry-gate__actions {
-  position: fixed;
-  inset: 0;
-  z-index: 8;
-  pointer-events: none;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 6px;
 }
 
 .entry-gate__actions button {
-  position: absolute;
-  left: var(--yes-x);
-  top: var(--yes-y);
-  translate: -50% -50%;
-  rotate: var(--yes-rotate, 0deg);
   min-width: 118px;
   min-height: 46px;
   border: 3px solid rgba(255, 232, 251, 0.9);
@@ -361,56 +390,7 @@ iframe {
   font-weight: 900;
   box-shadow: 4px 4px 0 rgba(57, 52, 104, 0.88);
   cursor: none;
-  pointer-events: auto;
   transition: transform 160ms ease, filter 160ms ease, background 160ms ease;
-}
-
-.entry-gate__actions button:nth-child(1) {
-  --yes-x: 13vw;
-  --yes-y: 74vh;
-  --yes-rotate: -7deg;
-}
-
-.entry-gate__actions button:nth-child(2) {
-  --yes-x: 23vw;
-  --yes-y: 34vh;
-  --yes-rotate: 5deg;
-}
-
-.entry-gate__actions button:nth-child(3) {
-  --yes-x: 41vw;
-  --yes-y: 80vh;
-  --yes-rotate: 2deg;
-}
-
-.entry-gate__actions button:nth-child(4) {
-  --yes-x: 61vw;
-  --yes-y: 22vh;
-  --yes-rotate: -4deg;
-}
-
-.entry-gate__actions button:nth-child(5) {
-  --yes-x: 78vw;
-  --yes-y: 33vh;
-  --yes-rotate: 7deg;
-}
-
-.entry-gate__actions button:nth-child(6) {
-  --yes-x: 84vw;
-  --yes-y: 73vh;
-  --yes-rotate: -3deg;
-}
-
-.entry-gate__actions button:nth-child(7) {
-  --yes-x: 33vw;
-  --yes-y: 59vh;
-  --yes-rotate: -2deg;
-}
-
-.entry-gate__actions button:nth-child(8) {
-  --yes-x: 67vw;
-  --yes-y: 62vh;
-  --yes-rotate: 4deg;
 }
 
 .entry-gate__actions button:hover,
@@ -421,6 +401,71 @@ iframe {
   outline-offset: 4px;
   transform: translate(-2px, -2px);
   filter: drop-shadow(0 0 12px rgba(255, 232, 251, 0.58));
+}
+
+.entry-gate__glitch-particles {
+  position: absolute;
+  right: -42px;
+  top: 30%;
+  z-index: 4;
+  width: 116px;
+  height: 190px;
+  pointer-events: none;
+  filter:
+    drop-shadow(2px 0 rgba(134, 214, 239, 0.72))
+    drop-shadow(-2px 0 rgba(255, 126, 173, 0.64));
+}
+
+.entry-gate__glitch-particles span {
+  position: absolute;
+  width: var(--particle-size, 16px);
+  height: var(--particle-size, 16px);
+  left: var(--particle-x);
+  top: var(--particle-y);
+  background:
+    linear-gradient(135deg, rgba(255, 239, 252, 0.92), rgba(134, 214, 239, 0.72) 45%, rgba(255, 126, 173, 0.72));
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  opacity: 0.78;
+  animation: entryParticleGlitch var(--particle-speed, 2.4s) steps(5, end) infinite;
+}
+
+.entry-gate__glitch-particles span:nth-child(1) {
+  --particle-x: 18px;
+  --particle-y: 8px;
+  --particle-size: 14px;
+  --particle-speed: 2.2s;
+}
+
+.entry-gate__glitch-particles span:nth-child(2) {
+  --particle-x: 58px;
+  --particle-y: 34px;
+  --particle-size: 10px;
+  --particle-speed: 1.8s;
+  rotate: 42deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(3) {
+  --particle-x: 36px;
+  --particle-y: 82px;
+  --particle-size: 18px;
+  --particle-speed: 2.7s;
+  rotate: -28deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(4) {
+  --particle-x: 80px;
+  --particle-y: 118px;
+  --particle-size: 12px;
+  --particle-speed: 2s;
+  rotate: 82deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(5) {
+  --particle-x: 10px;
+  --particle-y: 154px;
+  --particle-size: 9px;
+  --particle-speed: 1.6s;
+  rotate: -70deg;
 }
 
 .entry-gate.is-leaving {
@@ -440,8 +485,104 @@ iframe {
 
 @keyframes entryGateNoise {
   0%, 100% { transform: translate3d(0, 0, 0); }
+  18% { transform: translate3d(3%, -1%, 0) skewX(1deg); }
   35% { transform: translate3d(2%, -1%, 0); }
+  52% { transform: translate3d(-4%, 2%, 0) skewX(-1deg); }
   70% { transform: translate3d(-1%, 1%, 0); }
+}
+
+@keyframes entryWindowGlitch {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    filter: none;
+  }
+  31% {
+    transform: translate3d(0, 0, 0);
+    filter: none;
+  }
+  33% {
+    transform: translate3d(3px, -1px, 0);
+    filter: saturate(1.18) contrast(1.08);
+  }
+  35% {
+    transform: translate3d(-2px, 1px, 0);
+    filter: hue-rotate(8deg);
+  }
+  38% {
+    transform: translate3d(0, 0, 0);
+    filter: none;
+  }
+}
+
+@keyframes entryScreenTear {
+  0%, 100% {
+    transform: translateX(0);
+    clip-path: inset(0);
+  }
+  28% {
+    transform: translateX(0);
+    clip-path: inset(0);
+  }
+  32% {
+    transform: translateX(10px);
+    clip-path: inset(12% 0 61% 0);
+  }
+  36% {
+    transform: translateX(-7px);
+    clip-path: inset(47% 0 21% 0);
+  }
+  40% {
+    transform: translateX(0);
+    clip-path: inset(0);
+  }
+}
+
+@keyframes entrySignalFlash {
+  0%, 100% { opacity: 0; transform: translateX(-35%); }
+  42% { opacity: 0; transform: translateX(-35%); }
+  46% { opacity: 0.65; transform: translateX(16%); }
+  48% { opacity: 0.18; transform: translateX(38%); }
+  50% { opacity: 0; transform: translateX(45%); }
+}
+
+@keyframes entryTitleGlitch {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    filter: none;
+  }
+  22% {
+    transform: translate3d(0, 0, 0);
+  }
+  24% {
+    transform: translate3d(4px, 0, 0);
+    filter: saturate(1.35);
+  }
+  25% {
+    transform: translate3d(-3px, 1px, 0);
+  }
+  27% {
+    transform: translate3d(0, 0, 0);
+    filter: none;
+  }
+}
+
+@keyframes entryParticleGlitch {
+  0%, 100% {
+    opacity: 0.34;
+    transform: translate3d(0, 0, 0) scale(0.86);
+  }
+  26% {
+    opacity: 0.9;
+    transform: translate3d(-12px, 4px, 0) scale(1.08);
+  }
+  48% {
+    opacity: 0.18;
+    transform: translate3d(9px, -8px, 0) scale(0.72);
+  }
+  72% {
+    opacity: 0.76;
+    transform: translate3d(-3px, 12px, 0) scale(1);
+  }
 }
 
 @keyframes entryDataDissolve {
@@ -533,39 +674,10 @@ iframe {
     border-width: 2px;
   }
 
-  .entry-gate__actions button:nth-child(1) {
-    --yes-x: 18vw;
-    --yes-y: 76vh;
-  }
-
-  .entry-gate__actions button:nth-child(2) {
-    --yes-x: 24vw;
-    --yes-y: 25vh;
-  }
-
-  .entry-gate__actions button:nth-child(3) {
-    --yes-x: 50vw;
-    --yes-y: 84vh;
-  }
-
-  .entry-gate__actions button:nth-child(4) {
-    --yes-x: 73vw;
-    --yes-y: 24vh;
-  }
-
-  .entry-gate__actions button:nth-child(5) {
-    --yes-x: 82vw;
-    --yes-y: 66vh;
-  }
-
-  .entry-gate__actions button:nth-child(6) {
-    --yes-x: 18vw;
-    --yes-y: 54vh;
-  }
-
-  .entry-gate__actions button:nth-child(7),
-  .entry-gate__actions button:nth-child(8) {
-    display: none;
+  .entry-gate__glitch-particles {
+    right: -22px;
+    top: 25%;
+    scale: 0.72;
   }
 }
 
