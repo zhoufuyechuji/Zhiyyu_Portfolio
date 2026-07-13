@@ -405,11 +405,11 @@ iframe {
 
 .entry-gate__glitch-particles {
   position: absolute;
-  right: -42px;
-  top: 30%;
+  right: -64px;
+  top: 24%;
   z-index: 4;
-  width: 116px;
-  height: 190px;
+  width: 168px;
+  height: 250px;
   pointer-events: none;
   filter:
     drop-shadow(2px 0 rgba(134, 214, 239, 0.72))
@@ -466,6 +466,62 @@ iframe {
   --particle-size: 9px;
   --particle-speed: 1.6s;
   rotate: -70deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(6) {
+  --particle-x: 112px;
+  --particle-y: 22px;
+  --particle-size: 7px;
+  --particle-speed: 1.4s;
+  rotate: 18deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(7) {
+  --particle-x: 96px;
+  --particle-y: 62px;
+  --particle-size: 15px;
+  --particle-speed: 2.9s;
+  rotate: -112deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(8) {
+  --particle-x: 124px;
+  --particle-y: 96px;
+  --particle-size: 8px;
+  --particle-speed: 1.7s;
+  rotate: 138deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(9) {
+  --particle-x: 52px;
+  --particle-y: 142px;
+  --particle-size: 13px;
+  --particle-speed: 2.3s;
+  rotate: 12deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(10) {
+  --particle-x: 104px;
+  --particle-y: 176px;
+  --particle-size: 16px;
+  --particle-speed: 3.1s;
+  rotate: -42deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(11) {
+  --particle-x: 42px;
+  --particle-y: 214px;
+  --particle-size: 7px;
+  --particle-speed: 1.5s;
+  rotate: 94deg;
+}
+
+.entry-gate__glitch-particles span:nth-child(12) {
+  --particle-x: 132px;
+  --particle-y: 226px;
+  --particle-size: 11px;
+  --particle-speed: 2.5s;
+  rotate: -146deg;
 }
 
 .entry-gate.is-leaving {
