@@ -68,6 +68,7 @@ function renderHome() {
       ${renderEntryGate()}
       ${renderNavigation()}
       ${renderButterflyGuide()}
+      ${renderAmbientGlitchParticles("home")}
       <main class="scene-camera" data-scene-camera>
         ${renderButterflyField()}
         ${renderVaporAssetLayer("home")}
@@ -235,6 +236,7 @@ function renderProject(slug) {
       ${renderNavigation()}
       ${renderButterflyGuide()}
       ${renderButterflyField()}
+      ${renderAmbientGlitchParticles("project")}
       <main class="project-page">
         <a class="back-link" href="#projects">Back to Project Wall</a>
         <header class="project-hero">
@@ -294,6 +296,15 @@ function renderButterflyField() {
     <div class="butterfly-field" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  `;
+}
+
+function renderAmbientGlitchParticles(context = "home") {
+  const count = context === "project" ? 16 : 24;
+  return `
+    <div class="ambient-glitch-particles ambient-glitch-particles--${context}" aria-hidden="true">
+      ${Array.from({ length: count }, (_, index) => `<span class="ambient-glitch-particle ambient-glitch-particle--${index + 1}"></span>`).join("")}
     </div>
   `;
 }
