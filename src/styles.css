@@ -374,7 +374,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  gap: clamp(24px, 4vw, 46px);
   margin-top: 6px;
 }
 
