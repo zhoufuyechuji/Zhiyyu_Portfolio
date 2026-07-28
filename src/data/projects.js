@@ -162,7 +162,8 @@ export const projects = [
       imageTreatment: "warm shadowed fantasy",
       pageMood: "dark, mythic, theatrical"
     },
-    links: [{ label: "Open itch.io", href: "https://yzy-jinn.itch.io/erebus" }]
+    introLinks: [{ label: "Play on itch.io", href: "https://yzy-jinn.itch.io/erebus" }],
+    links: []
   },
   {
     id: "city",

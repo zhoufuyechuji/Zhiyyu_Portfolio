@@ -1232,6 +1232,16 @@ iframe {
   background: var(--green);
 }
 
+.project-intro-links {
+  margin-top: 18px;
+}
+
+.project-intro-links a {
+  min-width: min(100%, 220px);
+  justify-content: center;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--project-accent, #86bdd0) 22%, transparent);
+}
+
 .project-page {
   padding: 44px 0 80px;
 }

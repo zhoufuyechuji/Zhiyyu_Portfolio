@@ -267,6 +267,7 @@ function renderProject(slug) {
               <span>${theme.panelStyle || "case file panels"}</span>
             </div>
             <p>${project.fullDescription}</p>
+            ${renderIntroLinks(project)}
           </div>
           <section class="monitor-frame">
             <div class="monitor-frame__bar"><span>PROJECT SIGNAL / HERO CAPTURE</span><span class="record-dot">REC</span></div>
@@ -424,6 +425,11 @@ function renderDocumentLinks(project) {
       ${project.documentationLinks.map((link) => `<a href="${link.href}" target="_blank" rel="noreferrer" download>${link.label}</a>`).join("")}
     </div>
   `;
+}
+
+function renderIntroLinks(project) {
+  if (!project.introLinks?.length) return "";
+  return `<div class="project-links project-intro-links">${project.introLinks.map((link) => `<a href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`).join("")}</div>`;
 }
 
 function renderGalleryCaption(image) {
