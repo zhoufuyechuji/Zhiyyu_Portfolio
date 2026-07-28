@@ -7,6 +7,7 @@ import {
 
 const root = document.getElementById("root");
 const BASE_URL = import.meta.env.BASE_URL || "/";
+const ENTRY_GATE_STORAGE_KEY = "zhiyunPortfolioEntryGateSeen";
 let contactLinks = [];
 let profile = {};
 let projects = [];
@@ -35,6 +36,22 @@ function htmlWithAssetBase(markup) {
 
 function setRootHtml(markup) {
   root.innerHTML = htmlWithAssetBase(markup);
+}
+
+function hasSeenEntryGate() {
+  try {
+    return window.localStorage.getItem(ENTRY_GATE_STORAGE_KEY) === "true";
+  } catch {
+    return false;
+  }
+}
+
+function rememberEntryGateSeen() {
+  try {
+    window.localStorage.setItem(ENTRY_GATE_STORAGE_KEY, "true");
+  } catch {
+    // If storage is unavailable, keep the animated exit for this visit.
+  }
 }
 
 async function loadPortfolioData() {
@@ -154,6 +171,8 @@ function renderHome() {
 }
 
 function renderEntryGate() {
+  if (hasSeenEntryGate()) return "";
+
   return `
     <section class="entry-gate" data-entry-gate role="dialog" aria-modal="true" aria-labelledby="entry-gate-title">
       <div class="entry-gate__noise" aria-hidden="true"></div>
@@ -1003,6 +1022,7 @@ function bindEntryGate() {
   const cursor = gate.querySelector("[data-entry-cursor]");
 
   const enterPortfolio = () => {
+    rememberEntryGateSeen();
     gate.classList.add("is-leaving");
     gate.setAttribute("aria-hidden", "true");
     window.setTimeout(() => gate.remove(), 520);
