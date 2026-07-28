@@ -11,9 +11,9 @@ export const projects = [
     thumbnail: "/thesis-site/assets/UI_MainMenu_BG_2.png",
     heroImage: "/thesis-site/assets/UI_MainMenu_BG_2.png",
     shortDescription:
-      "A pet simulation thesis prototype about distant watching, restricted information, and risk prediction.",
+      "A pet-monitoring simulation about balancing work tasks with remote observation, prediction, and intervention.",
     fullDescription:
-      "This thesis explores how restricted surveillance can create tension in a pet simulation game. The player cannot directly control every event, so they must read partial signals, judge risk, and decide when to intervene.",
+      "<strong>English:</strong> A pet-monitoring simulation game in which players balance work tasks with remotely observing and managing an active pet. Limited monitoring time and camera visibility create information uncertainty, requiring players to predict the pet's behavior, prioritize risks, and decide when to intervene.<br><br><strong>中文：</strong>一款远程监控宠物的模拟游戏。玩家需要在完成工作任务的同时，通过摄像头观察和管理一只随时可能捣乱的宠物。有限的监控时间和摄像头视野会造成信息缺失，玩家需要预测宠物行为、判断风险并选择合适的干预时机。",
     designGoal:
       "Turn limitation into pressure: make the player feel responsible while never giving them perfect information.",
     playerExperienceGoal:
@@ -77,9 +77,9 @@ export const projects = [
     thumbnail: "/assets/projects/officedrift-2025-03-05/image-03.png",
     heroImage: "/assets/projects/officedrift-2025-03-05/image-04.png",
     shortDescription:
-      "A surreal arcade shooter where office anxiety becomes a combat arena.",
+      "A surreal workplace simulation exploring time pressure, restricted action, and emotional exhaustion.",
     fullDescription:
-      "Office Drift transforms everyday office objects and pressure into enemies, motion rhythms, and red-black interface feedback.",
+      "<strong>English:</strong> A surreal workplace simulation exploring time pressure and emotional exhaustion. Set inside a stylized office environment, the game uses restricted player actions, task management, and escalating workplace tension to visualize the psychological effects of burnout.<br><br><strong>中文：</strong>一款表现职场时间压力和情绪耗竭的超现实办公室模拟游戏。游戏通过受限制的玩家行动、任务管理以及不断增加的工作压力，将职场倦怠和心理疲惫转化为可视化的游戏体验。",
     designGoal:
       "Build an arcade remake that communicates stress through movement, enemy behavior, and visual rhythm.",
     playerExperienceGoal:
@@ -126,9 +126,9 @@ export const projects = [
     thumbnail: "/assets/projects/indiegame-erebus-2022-03-08/image-03.jpg",
     heroImage: "/assets/projects/indiegame-erebus-2022-03-08/image-04.jpg",
     shortDescription:
-      "A gothic side-scrolling platform game with myth-inspired atmosphere and combat.",
+      "A 2D action-platformer inspired by Greek mythology, Gothic aesthetics, Souls-like tension, and Metroidvania exploration.",
     fullDescription:
-      "Erebus uses gothic spaces, character art, and side-scrolling combat to build a dark mythic journey.",
+      "<strong>English:</strong> A 2D action-platformer inspired by Greek mythology and Gothic aesthetics, combining Souls-like combat tension with Metroidvania exploration. Players control a blind artist who becomes a reaper and travels through a decaying underworld in search of artistic redemption.<br><br><strong>中文：</strong>一款融合希腊神话和哥特美学的2D动作平台游戏，结合类魂战斗压力与银河城式探索结构。玩家扮演一名成为死神的失明艺术家，在逐渐腐朽的冥界中探索，并寻找属于自己的艺术救赎。",
     designGoal:
       "Create a compact platforming experience where combat, level rhythm, and visual tone support one mood.",
     playerExperienceGoal:
@@ -272,9 +272,9 @@ export const projects = [
     heroImage: "/assets/projects/2021-01-08/children-source/children-cover.png",
     contentSectionTitle: "Content",
     shortDescription:
-      "A commercial serious game translating eye-care knowledge into touch-based mini games.",
+      "A serious game that transforms preschool eye-training exercises into accessible and engaging minigames.",
     fullDescription:
-      "This project explores an interactive serious game experience for preschool children's eye-care education. It translates eye-care knowledge into short touch-based games, positive feedback, colorful UI, simple gestures, and a classroom-friendly interactive whiteboard format.",
+      "<strong>English:</strong> A serious game designed to transform repetitive eye-training exercises for preschool children into accessible and engaging gameplay. The project contains ten interactive minigames based on visual exercises such as fixation, smooth pursuit, and saccadic eye movement, with difficulty and interaction designed for children aged four to six.<br><br><strong>中文：</strong>一款将学龄前儿童重复性的眼部训练转化为趣味玩法的严肃游戏。项目包含十款互动小游戏，对应注视、平滑追踪和眼球扫视等视觉训练，并针对4至6岁儿童设计了简单直观的操作方式和难度曲线。",
     designGoal:
       "Make eye-care education easier to understand and remember through short interactive tasks, visual guidance, sound feedback, rewards, and simple touch interactions designed for preschool children.",
     playerExperienceGoal:
@@ -424,9 +424,9 @@ export const projects = [
     heroImage: "/assets/projects/tick-2026/image-111.png",
     contentSectionTitle: "Content",
     shortDescription:
-      "A fairytale time-puzzle prototype built around a pocket watch, observation points, and shifting world states.",
+      "A short surreal narrative puzzle game about using a pocket watch to shift objects and environments through time.",
     fullDescription:
-      "Tick: The Fixer of Broken Fairytales explores time as a playable interface. Players use a pocket watch to shift states, observe how the world changes, and restore a collapsing fairytale space through three encounter areas.",
+      "<strong>English:</strong> A short surreal narrative puzzle game set in a distorted fairy-tale town during the funeral of a villain. Players use a pocket watch to move objects and environments between different moments in time, reconstructing the events surrounding the villain's death while gradually realizing that they are not investigating the past, but attempting to change an irreversible moment.<br><br><strong>中文：</strong>一款发生在扭曲童话小镇中的短篇超现实叙事解谜游戏，故事围绕一场“反派”的葬礼展开。玩家使用怀表调整物体和环境所处的时间状态，逐步还原反派死亡前后的事件，却最终发现自己并不是在调查真相，而是在试图改变一个无法挽回的瞬间。",
     designGoal:
       "Turn time manipulation into a readable design language through clock UI, observation points, and encounter-specific puzzle rules.",
     playerExperienceGoal:
@@ -521,9 +521,9 @@ export const projects = [
     heroImage: "/assets/projects/dream-fallen-2026/ui-1x/ui-main-menu-bg.png",
     contentSectionTitle: "Content",
     shortDescription:
-      "A narrative-driven FPS puzzle adventure about escaping an unfinished dream-based stress intervention system.",
+      "A 3D narrative FPS puzzle game inside an unstable dream-based stress intervention system.",
     fullDescription:
-      "Dream Fallen places the player in the role of a researcher who accidentally enters an unfinished dream-based experimental stress intervention system. The project combines first-person combat, exploration, resource management, circuit puzzles, and environmental narrative. Each dream layer turns a different kind of pressure into space: school pressure, work pressure, daily-life pressure, and finally a factory-like system that produces suppressed emotion.",
+      "<strong>English:</strong> A 3D narrative FPS puzzle game set inside an unstable dream-based stress intervention system. Players explore four symbolic layers of psychological pressure: school, laboratory, city street, and factory, combining combat, environmental puzzles, resource management, and weapon upgrades to escape the collapsing dream.<br><br><strong>中文：</strong>一款以失控的梦境压力干预系统为背景的3D叙事FPS解谜游戏。玩家将在学校、实验室、城市街道和工厂四个象征不同心理压力的梦境关卡中探索，通过战斗、环境解谜、资源管理和武器升级，寻找逃离梦境的方法。",
     designGoal:
       "Translate abstract emotional states such as fear, control, repetition, commercialization, and exploitation into readable level layouts, encounter pacing, puzzle gates, UI screens, and environmental story beats.",
     playerExperienceGoal:
