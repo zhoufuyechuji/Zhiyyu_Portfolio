@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Graduation thesis showcase for Pet Is Also Busy Today, an Unreal Engine pet simulation prototype exploring strategic gameplay through intentional constraints."
+    >
+    <title>Tension through Surveillance Restriction: Designing Strategic Gameplay in Pet Simulation | Thesis Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top">Tension through Surveillance Restriction: Designing Strategic Gameplay in Pet Simulation</a>
+      <nav>
+        <a href="#framework">Framework</a>
+        <a href="#project">Project</a>
+        <a href="#interact">Interact</a>
+        <a href="#systems">Systems</a>
+        <a href="#process">Process</a>
+        <a href="#testing">Validation</a>
+        <a href="#paper">Paper</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Tension through Surveillance Restriction:</h1>
+          <p class="hero-byline">Zhiyun Yu | MFA Thesis Research | Spring 2026</p>
+          <p class="hero-text">
+            Designing strategic gameplay in pet simulation.
+          </p>
+          <p class="hero-text">
+            Pet care becomes strategic when players cannot always see, act, or respond immediately.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#project">View Project</a>
+            <a class="button ghost" href="#testing">See Validation</a>
+          </div>
+        </div>
+        <img class="hero-walk-cat" src="assets/sticker-frames/walk/walk_00.png" alt="" aria-hidden="true" data-frame-sequence="walk" data-frame-count="20" data-frame-delay="80">
+      </section>
+
+      <section class="snapshot-bar" aria-label="Project snapshot">
+        <div>
+          <span class="label">Research Title</span>
+          <strong>Tension through Surveillance Restriction: Designing Strategic Gameplay in Pet Simulation</strong>
+        </div>
+        <div>
+          <span class="label">Role</span>
+          <strong>Game / System / UI / Blueprint</strong>
+        </div>
+        <div>
+          <span class="label">Tools</span>
+          <strong>UE 5.5, Figma, Photoshop, Illustrator</strong>
+        </div>
+        <div>
+          <span class="label">Project Type</span>
+          <strong>MFA Thesis Prototype</strong>
+        </div>
+      </section>
+
+      <section class="section research-section research-aim-section">
+        <img class="section-deco sticker-sleep" src="assets/sticker-frames/sleep/sleep_00.png" alt="" aria-hidden="true" data-frame-sequence="sleep" data-frame-count="60" data-frame-delay="100">
+        <div class="section-heading">
+          <p class="eyebrow">Research Aim</p>
+          <h2>Investigate how intentional surveillance mechanical constraints can create psychological tension and strategic decision-making in pet simulation games.</h2>
+        </div>
+      </section>
+
+      <section class="section market-section" aria-labelledby="gap-title">
+        <div class="metric-wall">
+          <article>
+            <strong>$326.14M</strong>
+            <span>Projected 2025 virtual pet simulator app market</span>
+          </article>
+          <article>
+            <strong>$525.05M</strong>
+            <span>Projected 2030 market size</span>
+          </article>
+          <article>
+            <strong>90%</strong>
+            <span>Analyzed pet simulators relied on continuous control and immediate feedback</span>
+          </article>
+        </div>
+        <div class="section-copy">
+          <p class="eyebrow">Design Gap</p>
+          <h2 id="gap-title">Most pet simulations are comfortable, immediate, and unrestricted.</h2>
+          <p>
+            These systems support relaxation and attachment, but they rarely ask players to make decisions under uncertainty.
+          </p>
+          <p>
+            This project explores what happens when pet simulation includes intentional limits: limited monitoring, restricted visibility, delayed intervention, and work-based interruption.
+          </p>
+        </div>
+      </section>
+
+      <section class="section research-section design-innovation-section">
+        <div class="section-heading">
+          <p class="eyebrow">Design Innovation</p>
+          <h2>The research adds more tension, prediction, risk assessment, and strategic decision-making to pet simulation.</h2>
+        </div>
+        <div class="constraint-chain" aria-label="Design innovation">
+          <article>
+            <span>01</span>
+            <h3>Information Access</h3>
+            <p>The prototype limits when and how players can see the pet, making incomplete information part of the strategy.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Intervention Timing</h3>
+            <p>Players cannot solve every problem instantly, so they must decide which risks need attention first.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Care Loop</h3>
+            <p>Observation becomes a loop of searching, predicting, leaving to work, returning, and intervening at the right moment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="framework" class="section framework-section research-section">
+        <div class="section-heading">
+          <p class="eyebrow">Theoretical Framework</p>
+          <h2>The project uses Theory of Constraints to explain why limited monitoring creates strategy.</h2>
+        </div>
+        <div class="theory-layout">
+          <article class="theory-card">
+            <h3>Theory of Constraints</h3>
+            <p>
+              Theory of Constraints identifies the bottleneck that shapes a whole system. Once that bottleneck is clear, the design can test how players adapt their attention, timing, and decisions around it.
+            </p>
+          </article>
+          <article class="toc-map" aria-label="TOC mapping to project systems">
+            <h3>TOC and This Project</h3>
+            <div class="toc-row">
+              <strong>System Goal</strong>
+              <span>Maintain pet stability while completing work tasks</span>
+              <p>Players balance pet care and productivity.</p>
+            </div>
+            <div class="toc-row">
+              <strong>Main Bottleneck: Limited Surveillance Access</strong>
+              <span>Temporal restriction limits <em>when</em> players can monitor; spatial restriction limits <em>what</em> players can see</span>
+              <p>Creates uncertainty, delayed response, and risk-management decisions.</p>
+            </div>
+            <div class="toc-row">
+              <strong>Information Throughput</strong>
+              <span>Pet status values, camera view, warning cues, and behavior changes</span>
+              <p>Players must decide which information matters most.</p>
+            </div>
+            <div class="toc-row">
+              <strong>Cognitive WIP</strong>
+              <span>Mood, Hunger, Mischief, work duration, and off-screen pet behavior that players must mentally track</span>
+              <p>Increases cognitive pressure and planning demand.</p>
+            </div>
+            <div class="toc-row">
+              <strong>Strategic Adaptation</strong>
+              <span>Pre-work checking, predictive monitoring, and returning during risky moments</span>
+              <p>Shifts players from reaction toward prediction and prioritization.</p>
+            </div>
+          </article>
+        </div>
+        <div class="constraint-types" aria-label="Temporal and spatial constraint mapping">
+          <article>
+            <h3>Temporal Restriction</h3>
+            <p>Limits <strong>when</strong> players can monitor or intervene, turning work time into a risk-management choice.</p>
+          </article>
+          <article>
+            <h3>Spatial Restriction</h3>
+            <p>Limits <strong>what</strong> players can see at one time, turning monitoring into active searching.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="project" class="section game-overview-section">
+        <div class="section-heading">
+          <p class="eyebrow">Game Overview</p>
+          <h2>A pet simulation about working, watching, and stopping trouble from a distance.</h2>
+        </div>
+        <div class="game-overview-panel">
+          <div class="game-overview-copy">
+            <p>
+              This is a pet simulation game where players take the role of an office worker who leaves home for work. Because she misses and worries about the naughty cat at home, she secretly checks the home camera.
+            </p>
+            <p>
+              Through remote-controlled smart furniture and devices, players can stop the cat from causing trouble before destructive behavior happens. The core experience asks players to balance working, monitoring, and intervention under limited attention and limited time.
+            </p>
+          </div>
+          <figure class="game-overview-image">
+            <img src="assets/game-overview-comic.png" alt="Player secretly checks the home camera during work to watch the cat">
+          </figure>
+        </div>
+      </section>
+
+      <section id="interact" class="section interact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive Part</p>
+          <h2>Try some functions in the browser.</h2>
+          <p>
+            The web demo follows the prototype structure: monitor first, check pet stats when needed, and choose work time knowing it locks attention away from the pet.
+          </p>
+        </div>
+        <div class="ue-demo ue-clean-demo" aria-live="polite">
+          <div class="ue-hud">
+            <span><b id="ueScreenName">MonitorUI</b></span>
+            <span>Money <b id="ueMoney">$0</b></span>
+            <span>Behavior <b id="ueBehavior">Peaceful</b></span>
+          </div>
+          <div class="ue-screen-switcher" aria-label="Screen switcher">
+            <button class="is-active" type="button" data-screen="monitor">MonitorUI</button>
+            <button type="button" data-screen="pet">PetUI</button>
+            <button type="button" data-screen="work">WorkUI</button>
+          </div>
+          <div class="ue-body ue-stage">
+            <section class="ue-screen is-active" data-ue-screen="monitor" aria-label="Monitor UI">
+              <div class="ue-camera-ui">
+                <img class="ue-camera-bg" src="assets/BG_CameraUI.png" alt="Camera UI frame from the Unreal prototype">
+                <div class="ue-camera-feed">
+                  <img id="ueMonitorImage" src="assets/UI_monitor_Insidebg_ALERTED.png" alt="Camera monitor view of the full pet room">
+                  <video id="ueFeedbackVideo" class="ue-feedback-video" src="assets/animation/sleep.mp4" muted playsinline preload="auto"></video>
+                  <div id="ueFeedback" class="ue-feedback">
+                    <strong id="ueFeedbackTitle">Idle</strong>
+                  </div>
+                  <span id="ueCameraLabel" class="ue-camera-label">Camera</span>
+                </div>
+                <button class="ue-camera-arrow ue-camera-left" type="button" data-camera="left" aria-label="Camera move left">
+                  <img src="assets/Click_Right.png" alt="">
+                </button>
+                <button class="ue-camera-arrow ue-camera-right" type="button" data-camera="right" aria-label="Camera move right">
+                  <img src="assets/Click_Left.png" alt="">
+                </button>
+                <button class="ue-camera-arrow ue-camera-up" type="button" data-camera="up" aria-label="Camera move up">
+                  <img src="assets/Click_Left.png" alt="">
+                </button>
+                <button class="ue-camera-arrow ue-camera-down" type="button" data-camera="down" aria-label="Camera move down">
+                  <img src="assets/Click_Left.png" alt="">
+                </button>
+                <div class="ue-camera-actions" aria-label="Monitor actions">
+                  <button class="ue-round-action" type="button" data-pet-action="feed" aria-label="Feed">
+                    <img src="assets/UI_Monitor_Button_Feed.png" alt="">
+                    <small></small>
+                  </button>
+                  <button class="ue-round-action" type="button" data-pet-action="toy" aria-label="Toy">
+                    <img src="assets/UI_Monitor_Button_Toy.png" alt="">
+                    <small></small>
+                  </button>
+                  <button class="ue-round-action" type="button" data-pet-action="notice" aria-label="Notice">
+                    <img src="assets/UI_Monitor_Button_Notice.png" alt="">
+                    <small></small>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="ue-screen" data-ue-screen="pet" aria-label="PetUI status screen">
+              <div class="ue-status-screen">
+                <div class="ue-status-art">
+                  <img src="assets/pet-status-reference.png" alt="Pet status detection interface">
+                </div>
+                <div class="ue-status-panel">
+                  <div class="ue-status-row">
+                    <span>Mood</span>
+                    <div class="ue-status-meter" aria-hidden="true"><span id="moodMeter"></span></div>
+                    <strong id="moodValue">1</strong>
+                  </div>
+                  <div class="ue-status-row">
+                    <span>Hungry</span>
+                    <div class="ue-status-meter" aria-hidden="true"><span id="hungerMeter"></span></div>
+                    <strong id="hungerValue">-1</strong>
+                  </div>
+                  <div class="ue-status-row">
+                    <span>Mischief</span>
+                    <div class="ue-status-meter" aria-hidden="true"><span id="mischiefMeter"></span></div>
+                    <strong id="mischiefValue">3</strong>
+                  </div>
+                  <p>PetUI is used for reading the pet state. Intervention still happens from MonitorUI.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="ue-screen" data-ue-screen="work" aria-label="WorkUI screen">
+              <div class="ue-work-screen">
+                <img class="ue-work-bg" src="assets/UI_Work_BG.png" alt="Work interface from the Unreal prototype">
+                <div class="ue-work-status">
+                  <strong id="ueWorkState">Ready</strong>
+                  <span id="ueWorkRemaining">Choose a duration</span>
+                </div>
+                <div class="ue-work-actions" aria-label="Work duration choices">
+                  <button class="ue-work-card is-short" type="button" data-work="short">
+                    <span>15Min-Work</span>
+                    <strong>+$5</strong>
+                  </button>
+                  <button class="ue-work-card is-half" type="button" data-work="half">
+                    <span>0.5Hour-Work</span>
+                    <strong>+$15</strong>
+                  </button>
+                  <button class="ue-work-card is-one" type="button" data-work="one">
+                    <span>1Hour-Work</span>
+                    <strong>+$35</strong>
+                  </button>
+                  <button class="ue-work-card is-two" type="button" data-work="two">
+                    <span>2hour-Work</span>
+                    <strong>+$80</strong>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="ue-message-card">
+            <span>Behavior</span>
+            <p id="ueMessage" class="ue-message">Monitor is open. Feed, Toy, and Notice are available only from this camera UI.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="systems" class="section systems-section">
+        <img class="section-deco sticker-scratch" src="assets/sticker-frames/scratch/scratch_00.png" alt="" aria-hidden="true" data-frame-sequence="scratch" data-frame-count="26" data-frame-delay="80">
+        <div class="section-heading">
+          <p class="eyebrow">Core Constraint Systems</p>
+          <h2>Limited surveillance access is the main bottleneck.</h2>
+          <p>
+            Temporal and spatial restrictions are two ways of applying the same core constraint: players cannot always access all information or respond exactly when they want.
+          </p>
+        </div>
+        <div class="system-grid">
+          <article class="system-card">
+            <img src="assets/thesis-media-v6/image14.png" alt="Work interface with duration choices">
+            <div>
+              <span class="label">01 Temporal Restriction</span>
+              <h3>Work blocks monitoring.</h3>
+              <p>Work periods temporarily remove monitoring access, turning work time into a risk-management decision.</p>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="assets/thesis-media-v6/image23.png" alt="Monitor interface with camera controls">
+            <div>
+              <span class="label">02 Spatial Restriction</span>
+              <h3>The whole room is never visible at once.</h3>
+              <p>Players must move the camera, search for the pet, and manage uncertainty about off-screen events.</p>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="assets/pet-status-reference.png" alt="Pet status detection interface">
+            <div>
+              <span class="label">03 Limited Intervention</span>
+              <h3>Actions do not solve everything instantly.</h3>
+              <p>Feed, Toy, and Notice affect different pet values, encouraging players to choose when and how to act.</p>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="assets/thesis-media-v6/image16.png" alt="Blueprint graph for temporal restriction logic">
+            <div>
+              <span class="label">04 Integrated Constraint</span>
+              <h3>Limited time, view, and response overlap.</h3>
+              <p>The final prototype combines these systems to create prediction, prioritization, and cognitive pressure.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="section process-section">
+        <div class="section-heading">
+          <p class="eyebrow">Design Process</p>
+          <h2>From pre-production sketches to playable prototype systems.</h2>
+        </div>
+        <div class="process-stack">
+          <article class="process-block">
+            <div class="process-block-heading">
+              <span>01</span>
+              <h3>Artifact Pre-Production</h3>
+            </div>
+            <div class="process-grid process-grid--pre">
+              <figure class="process-figure--wide process-figure--coreloop">
+                <img src="assets/thesis-media-v6/image4.png" alt="Core gameplay loop diagram">
+                <figcaption>Core Loop</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/thesis-media-v6/image5.png" alt="Early UI sketch for pet simulation interface">
+                <figcaption>UI Sketch</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/thesis-media-v6/image6.png" alt="Narrative comic storyboard introducing the project background">
+                <figcaption>Narrative Comic Storyboard</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/thesis-media-v6/image7.png" alt="Visual style sketch and color direction">
+                <figcaption>Visual Style Confirmation</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="process-block">
+            <div class="process-block-heading">
+              <span>02</span>
+              <h3>Development</h3>
+            </div>
+            <div class="process-grid process-grid--development">
+              <figure class="process-figure process-figure--wide">
+                <div class="process-gallery process-gallery--five">
+                  <img src="assets/thesis-media-v6/image8.jpeg" alt="Prototype main menu screen">
+                  <img src="assets/thesis-media-v6/image9.jpeg" alt="Prototype status UI screen">
+                  <img src="assets/thesis-media-v6/image10.jpeg" alt="Prototype pet state testing screen">
+                  <img src="assets/thesis-media-v6/image11.jpeg" alt="Prototype pause screen">
+                  <img src="assets/thesis-media-v6/image12.jpeg" alt="Prototype monitor screen">
+                </div>
+                <figcaption>Paper Prototype Screenshots</figcaption>
+              </figure>
+              <figure class="process-figure process-figure--wide process-figure--ingame">
+                <div class="process-gallery process-gallery--three process-gallery--ingame">
+                  <img src="assets/thesis-media-v6/image13.png" alt="In-game main menu screenshot">
+                  <img src="assets/thesis-media-v6/image14.png" alt="In-game work menu screenshot">
+                  <img src="assets/thesis-media-v6/image15.png" alt="In-game work lock screenshot">
+                </div>
+                <figcaption>In-Game Screenshots: Main Menu and Work Menu</figcaption>
+              </figure>
+              <figure class="process-figure process-figure--wide process-figure--blueprint">
+                <div class="process-gallery process-gallery--two process-gallery--blueprint">
+                  <img src="assets/thesis-media-v6/image16.png" alt="Temporal restriction Blueprint graph">
+                  <img src="assets/thesis-media-v6/image17.png" alt="Temporal timer Blueprint graph">
+                </div>
+                <figcaption>Temporal Restriction Blueprints</figcaption>
+              </figure>
+              <figure class="process-figure process-figure--wide process-figure--ingame">
+                <div class="process-gallery process-gallery--two process-gallery--ingame">
+                  <img src="assets/thesis-media-v6/image23.png" alt="In-game camera menu screenshot">
+                  <img src="assets/thesis-media-v6/image24.png" alt="In-game pause menu screenshot">
+                </div>
+                <figcaption>In-Game Screenshots: Camera Menu and Pause Menu</figcaption>
+              </figure>
+              <figure class="process-figure process-figure--wide process-figure--blueprint">
+                <div class="process-gallery process-gallery--three process-gallery--blueprint">
+                  <img src="assets/thesis-media-v6/image25.png" alt="Spatial constraint camera movement Blueprint graph">
+                  <img src="assets/thesis-media-v6/image26.png" alt="Spatial constraint interaction Blueprint graph">
+                  <img src="assets/thesis-media-v6/image27.png" alt="Spatial constraint camera clamp Blueprint graph">
+                </div>
+                <figcaption>Spatial Constraints Blueprint: Camera Move</figcaption>
+              </figure>
+              <figure class="process-figure process-figure--wide process-figure--blueprint">
+                <div class="process-gallery process-gallery--blueprint">
+                  <img src="assets/pet-random-movement-blueprint.png" alt="Pet random movement Blueprint graph">
+                </div>
+                <figcaption>Pet Random Movement</figcaption>
+              </figure>
+              <figure class="process-figure process-figure--wide process-figure--blueprint">
+                <div class="process-gallery process-gallery--five process-gallery--blueprint">
+                  <img src="assets/thesis-media-v6/image18.png" alt="Work result record Blueprint graph">
+                  <img src="assets/thesis-media-v6/image19.png" alt="Result menu screenshot">
+                  <img src="assets/thesis-media-v6/image20.png" alt="Time record countdown Blueprint graph">
+                  <img src="assets/thesis-media-v6/image21.png" alt="Income log Blueprint graph">
+                  <img src="assets/thesis-media-v6/image22.png" alt="Damage record Blueprint graph">
+                </div>
+                <figcaption>Result Menu and Time Record Stamp Blueprint</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="process-block process-block--experience">
+            <div class="process-block-heading">
+              <span>03</span>
+              <h3>Expanded Gameplay for Experience</h3>
+            </div>
+            <div class="experience-grid">
+              <article class="experience-card">
+                <figure>
+                  <img src="assets/expanded-gameplay/image1.png" alt="Real-world time mapping schedule icon">
+                </figure>
+                <div>
+                  <span class="label">Real-World Time Mapping</span>
+                  <h4>Work time mirrors a daily schedule.</h4>
+                  <p>The prototype maps play to a 9 AM to 5 PM workday structure, using temporal progression to make work absence feel more grounded and pressurized.</p>
+                </div>
+              </article>
+
+              <article class="experience-card experience-card--wide">
+                <div class="process-gallery process-gallery--three experience-gallery experience-gallery--decay">
+                  <img src="assets/expanded-gameplay/image2.png" alt="Dynamic decay system Blueprint overview">
+                  <img src="assets/expanded-gameplay/image3.png" alt="Hunger and mood decay Blueprint graph">
+                  <img src="assets/expanded-gameplay/image4.png" alt="Mischief increase and critical state Blueprint graph">
+                </div>
+                <div>
+                  <span class="label">Dynamic Decay System</span>
+                  <h4>Pet states create chain-reaction pressure.</h4>
+                  <p>Hunger and Mood gradually decrease while Mischief increases. Critical hunger accelerates Mood loss and Mischief growth, turning pet care into an escalating system rather than static maintenance.</p>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure>
+                  <img src="assets/expanded-gameplay/image5.png" alt="Pet warning behavior image">
+                </figure>
+                <div>
+                  <span class="label">Warning Behavior System</span>
+                  <h4>Warning states create a prediction window.</h4>
+                  <p>Before destructive actions occur, the pet enters a warning state. This gives players a short chance to anticipate and react strategically.</p>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure>
+                  <img src="assets/expanded-gameplay/image6.png" alt="Money-loss popup feedback">
+                </figure>
+                <div>
+                  <span class="label">Damage Feedback & Money Penalty</span>
+                  <h4>Destruction has visible consequences.</h4>
+                  <p>Destructive pet actions trigger money-loss popups, connecting missed interventions to clear economic feedback.</p>
+                </div>
+              </article>
+
+              <article class="experience-card experience-card--wide">
+                <figure>
+                  <img src="assets/expanded-gameplay/image7.png" alt="End-of-day star rating screen">
+                </figure>
+                <div>
+                  <span class="label">End-of-Day Rating System</span>
+                  <h4>Performance feedback supports reflection.</h4>
+                  <p>A star-based evaluation screen gives players lightweight emotional feedback at the end of the day, supporting replayability without harsh punishment.</p>
+                </div>
+              </article>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="testing" class="section testing-section">
+        <img class="section-deco sticker-warning" src="assets/sticker-frames/warning/warning_00.png" alt="" aria-hidden="true" data-frame-sequence="warning" data-frame-count="30" data-frame-delay="80">
+        <div class="section-heading">
+          <p class="eyebrow">Validation & Result</p>
+          <h2>Three testing phases measured how restriction changed player behavior.</h2>
+          <p>
+            The validation tested temporal restriction, spatial restriction, and integrated constraints through gameplay data and player questionnaires.
+          </p>
+        </div>
+        <div class="validation-methods validation-phases" role="tablist" aria-label="Validation phase picker">
+          <button class="validation-phase-card" type="button" role="tab" aria-selected="true" data-validation-phase="0">
+            <span class="label">Phase 1</span>
+            <h3>Temporal Restriction</h3>
+          </button>
+          <button class="validation-phase-card" type="button" role="tab" aria-selected="false" data-validation-phase="1">
+            <span class="label">Phase 2</span>
+            <h3>Spatial Restriction</h3>
+          </button>
+          <button class="validation-phase-card" type="button" role="tab" aria-selected="false" data-validation-phase="2">
+            <span class="label">Phase 3</span>
+            <h3>Integrated Constraint Validation</h3>
+          </button>
+        </div>
+        <div class="validation-setup-panels" data-phase-setup-wrap>
+          <article class="validation-setup-panel" data-phase-setup="0">
+            <div>
+              <span class="label">Test Setup</span>
+              <h3>Players selected different work durations.</h3>
+              <p>During work, players could not monitor or intervene. Destructive pet events could occur while the player was away.</p>
+            </div>
+            <div class="setup-flow" aria-label="Temporal test setup flow">
+              <span>Start Work</span>
+              <strong>No Monitoring<br>No Intervention</strong>
+              <span>Destructive Pet Events</span>
+            </div>
+            <div class="setup-chips" aria-label="Work durations tested">
+              <b>5s</b>
+              <b>10s</b>
+              <b>15s</b>
+              <b>20s</b>
+            </div>
+          </article>
+          <article class="validation-setup-panel" data-phase-setup="1" hidden>
+            <div>
+              <span class="label">Test Setup</span>
+              <h3>Players compared full-view and restricted-view monitoring.</h3>
+              <p>In the restricted-view condition, players could not see the full room at once. They had to move the camera to locate the pet and inspect possible problem areas.</p>
+            </div>
+            <div class="setup-flow" aria-label="Spatial test setup flow">
+              <span>Full View</span>
+              <strong>Restricted View</strong>
+              <span>Questionnaire 3</span>
+            </div>
+          </article>
+        </div>
+        <div class="questionnaire-panels">
+          <article class="questionnaire-panel" data-phase-questionnaire="0">
+            <span class="label">Questionnaire 2 | Sprint 1</span>
+            <h3>Temporal Constraint Test Questions</h3>
+            <ul>
+              <li>I felt tense when I could not monitor the pet.</li>
+              <li>I felt pressure knowing I could not act for a period of time.</li>
+              <li>I tried to check the pet state before something might happen.</li>
+              <li>I returned to the monitoring interface more frequently near risky moments.</li>
+              <li>I planned ahead before I lost access to the pet.</li>
+              <li>Did you find that pet state values affect pet behavior?</li>
+              <li>Did the interruption affect your decisions?</li>
+            </ul>
+          </article>
+          <article class="questionnaire-panel" data-phase-questionnaire="1" hidden>
+            <span class="label">Questionnaire 3 | Sprint 2</span>
+            <h3>Spatial Constraint Test Questions</h3>
+            <ul>
+              <li>Which version felt more stressful?</li>
+              <li>I felt more pressure when I had to move the camera to find the pet.</li>
+              <li>I felt unsure about what might happen when the pet was outside my view.</li>
+              <li>I felt I might miss something important when I had to search for the pet.</li>
+              <li>I returned to the monitoring interface more frequently near risky moments.</li>
+              <li>Do you think limited visibility increased tension in the game?</li>
+            </ul>
+          </article>
+          <article class="questionnaire-panel" data-phase-questionnaire="2" hidden>
+            <span class="label">Questionnaire 4 | Sprint 3</span>
+            <h3>Integrated Constraint Test Questions</h3>
+            <ul>
+              <li>I felt more pressure compared to playing a typical pet simulation game.</li>
+              <li>I was unable to respond in time to important situations.</li>
+              <li>I tried to check the pet state values before something might happen.</li>
+              <li>I returned to the monitoring interface more frequently near risky moments.</li>
+              <li>I felt overwhelmed when I could not see and could not act at the same time.</li>
+              <li>I planned ahead before returning to the Work Menu and starting work.</li>
+              <li>I missed important moments that required action.</li>
+              <li>Did the interruption or work time affect your decisions?</li>
+            </ul>
+          </article>
+        </div>
+        <div class="validation-layout">
+          <div class="chart-panel">
+            <div class="chart-header">
+              <h3 id="chartTitle">Temporal Constraint Test</h3>
+              <div class="chart-tabs" role="tablist" aria-label="Testing chart picker"></div>
+            </div>
+            <div class="der-formula" data-der-formula aria-label="Destructive Event Rate formula">
+              <span>Destructive Event Rate (DER)</span>
+              <span class="formula-equals">=</span>
+              <span class="fraction">
+                <strong>Destructive Pet Events During Work</strong>
+                <em>Total Corresponding Work Sessions</em>
+              </span>
+            </div>
+            <div class="bar-chart" aria-labelledby="chartTitle"></div>
+          </div>
+        </div>
+        <div class="phase-insights">
+          <article class="phase-insight key" data-phase-insight="0">
+            <span class="label">Phase 1 Key Finding</span>
+            <h3>Longer work absence increased destructive pet events.</h3>
+            <ul>
+              <li>Work duration became a meaningful risk variable.</li>
+              <li>Players needed to judge pet stability before leaving monitoring.</li>
+              <li>DER showed a clear positive relationship with time away.</li>
+            </ul>
+          </article>
+          <article class="phase-insight outcome" data-phase-insight="0">
+            <span class="label">Outcome / Implication</span>
+            <h3>Work time became a risk-management decision.</h3>
+            <ul>
+              <li>Players traded work reward for pet safety.</li>
+              <li>Temporal restriction encouraged planning before absence.</li>
+              <li>Decisions relied on prediction, not perfect information.</li>
+            </ul>
+          </article>
+          <article class="phase-insight key" data-phase-insight="1" hidden>
+            <span class="label">Phase 2 Key Finding</span>
+            <h3>Restricted visibility increased uncertainty and tension.</h3>
+            <ul>
+              <li>Players felt more pressure when they could not see the full room.</li>
+              <li>Off-screen uncertainty became the strongest tension source.</li>
+              <li>Searching for the pet increased fear of missing important events.</li>
+            </ul>
+          </article>
+          <article class="phase-insight outcome" data-phase-insight="1" hidden>
+            <span class="label">Outcome / Implication</span>
+            <h3>Monitoring became active searching instead of passive watching.</h3>
+            <ul>
+              <li>Spatial restriction changed how players gathered information.</li>
+              <li>Players had to decide where to look first.</li>
+              <li>Limited visibility encouraged attention management under uncertainty.</li>
+            </ul>
+          </article>
+          <article class="phase-insight key" data-phase-insight="2" hidden>
+            <span class="label">Phase 3 Key Finding</span>
+            <h3>Combined constraints increased pressure, prediction, and strategic prioritization.</h3>
+            <ul>
+              <li>Players treated monitoring access as a limited resource.</li>
+              <li>Restricted visibility and work absence encouraged advance planning.</li>
+              <li>Layered constraints also increased cognitive pressure and missed intervention moments.</li>
+            </ul>
+          </article>
+          <article class="phase-insight outcome" data-phase-insight="2" hidden>
+            <span class="label">Outcome / Implication</span>
+            <h3>Monitoring became a strategic resource-management task.</h3>
+            <ul>
+              <li>Players balanced risk, timing, and incomplete information.</li>
+              <li>Prediction became more important than immediate reaction.</li>
+              <li>Constraint clarity remains necessary for tension to support strategy.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section conclusion-section">
+        <div class="section-copy">
+          <p class="eyebrow">Conclusion</p>
+          <h2>Intentional constraints can create tension and strategy by reshaping how players access information, time interventions, and assess risk under uncertainty.</h2>
+          <p>
+            Longer work absence increased destructive pet events, making work time a risk-management decision.
+          </p>
+          <p>
+            Limited visibility increased uncertainty and turned monitoring into active searching.
+          </p>
+          <p>
+            Integrated constraints encouraged predictive monitoring, but also increased cognitive pressure.
+          </p>
+        </div>
+      </section>
+
+      <section class="section testing-section">
+        <div class="section-heading">
+          <p class="eyebrow">Limitations & Future Directions</p>
+        </div>
+        <div class="validation-methods">
+          <article>
+            <span class="label">Limitations</span>
+            <ul class="limitation-list">
+              <li>The prototype was developed as a full interactive game system, so multiple mechanics operated at the same time rather than testing one isolated variable.</li>
+              <li>The prototype was still evolving during testing, so different participants may have experienced different levels of UI clarity, feedback, and polish.</li>
+              <li>Some players had difficulty understanding the relationship between pet states, work systems, surveillance restrictions, and destructive behaviors.</li>
+              <li>Some behavioral findings relied on self-reported questionnaire data rather than fully automated gameplay telemetry.</li>
+            </ul>
+          </article>
+          <article>
+            <span class="label">Future Directions</span>
+            <div class="future-directions-copy">
+              <p>Future work can investigate how restriction systems affect player tension, strategy, and cognitive workload. Measurable gameplay data could help estimate tension levels and support designers in adjusting emotional curves, pacing, and player pressure more accurately.</p>
+              <p>Beyond game design, this direction may also contribute to studies of virtual pet care, emotional attachment, empathy, and human-pet relationships in virtual environments.</p>
+            </div>
+          </article>
+        </div>
+        <div class="result-summary">
+          <div>
+            <span class="label">AI & Collaboration Statement</span>
+            <h3>Authorship and support</h3>
+            <p>
+              ChatGPT was used for grammar editing, language refinement, and formatting support. Gameplay systems, design decisions, research direction, validation interpretation, and final conclusions were completed and reviewed by the author.
+            </p>
+            <p>
+              Visual support, including selected pet, environment, and character art assets, was provided by Mei Wanzhen. Core gameplay logic, UI systems, interaction design, and Unreal Engine implementation were developed by Zhiyun Yu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="paper" class="section paper-section">
+        <div class="paper-panel">
+          <div>
+            <p class="eyebrow">Thesis Paper</p>
+            <h2>Tension through Surveillance Restriction: Designing Strategic Gameplay in Pet Simulation</h2>
+            <p>
+              This website summarizes the thesis for graduation presentation. The full paper includes the market gap, TOC framework, prototype development, three validation phases, limitations, future directions, and acknowledgments.
+            </p>
+            <p class="paper-meta">Spring 2026 | MFA Thesis Research</p>
+          </div>
+          <div class="paper-actions">
+            <a class="button primary" href="assets/Thesis_TensionThroughSurveillanceRestriction_ZhiyunYu.docx" target="_blank" rel="noreferrer">Open Thesis DOCX</a>
+            <a class="button secondary" href="assets/thesis-paper.pdf" target="_blank" rel="noreferrer">Open PDF Reference</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Zhiyun Yu | ITGM 790 Spring 2026</p>
+      <p>Unreal Engine 5.5 | PC Prototype | Thesis Showcase</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
